@@ -3,3 +3,6 @@ include nginx
 include httpd
 include git
 }
+node 'pclient' {
+include nginx
+}
