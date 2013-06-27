@@ -5,4 +5,5 @@ include git
 }
 node 'pclient' {
 include nginx
+include httpd
 }
