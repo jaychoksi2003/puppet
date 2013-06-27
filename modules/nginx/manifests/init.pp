@@ -6,7 +6,7 @@ class nginx {
 	service { 'nginx':
 	ensure => running,
 	require => Package['nginx'],
-	enable => true,
+#	enable => true,
 	}
 
 	file { '/var/www/cat-pictures/index.html':
