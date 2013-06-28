@@ -7,4 +7,5 @@ node 'pclient' {
 include nginx
 include httpd
 #include git
+include ssh
 }
