@@ -1,7 +1,7 @@
 <VirtualHost *:81>
     ServerAdmin admin@cisco.com
-    DocumentRoot /var/www/html/<%= @site_name %>;
-    ServerName <%= @site_domain %>;
-    ErrorLog logs/<%= @site_domain %>-error_log;
-    CustomLog logs/<%= @site_domain %>-access_log common;
+    DocumentRoot /var/www/html/<%= @site_name %>
+    ServerName <%= @site_domain %>
+    ErrorLog logs/<%= @site_domain %>-error_log
+    CustomLog logs/<%= @site_domain %>-access_log common
 </VirtualHost>
