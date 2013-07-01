@@ -28,6 +28,13 @@ node 'pserver' {
 	}
 
 
+	cron { 'Back up of Puppet Config':
+	command => '/usr/bin/rsync -az /home/puppet/ /puppet-backup/',
+	hour => '04',
+	minute => '00',
+	}
+
+
 }
 
 node 'pclient' {
@@ -40,4 +47,19 @@ node 'pclient' {
 	command => 'echo nameserver 10.122.90.11 > /etc/resolv.conf',
 	unless => 'grep 10.122.90.11 /etc/resolv.conf',
 	}
+
+	user { 'git':
+        ensure => present,
+        comment => 'Jboss Users manage by puppet',
+        home => '/home/git',
+        managehome => true,
+        }
+
+	cron { 'Back up of Puppet Config':
+        command => '/usr/bin/rsync -az /home/git /puppet-backup/',
+        hour => '04',
+        minute => '00',
+        }
+
+
 }
