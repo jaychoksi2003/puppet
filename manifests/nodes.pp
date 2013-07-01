@@ -90,7 +90,7 @@ $site_domain = 'pclient.vms.spastp.cisco.com'
         notify => Service['httpd'],
         }
 
-	file { "/var/www/html/${pclient}/index.html":
+	file { "/var/www/html/${site_name}/index.html":
         source => 'puppet:///modules/httpd/index.html',
         }
 
