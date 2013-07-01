@@ -50,7 +50,7 @@ node 'pclient' {
 
 	user { 'git':
         ensure => present,
-        comment => 'Jboss Users manage by puppet',
+        comment => 'Git Users manage by puppet',
         home => '/home/git',
         managehome => true,
         }
@@ -59,6 +59,12 @@ node 'pclient' {
         command => '/usr/bin/rsync -az /home/git /puppet-backup/',
         hour => '04',
         minute => '00',
+        }
+	
+	cron { 'Git Pull':
+        command => '/usr/local/bin/pull-updates',
+        hour => '*',
+        minute => '*/5',
         }
 
 
