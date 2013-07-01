@@ -2,7 +2,7 @@ node 'pserver' {
 	include nginx
 	include httpd
 	include git
-
+################################## Custom Modification ####################
 	user { 'jboss':
 	ensure => present,
 	comment => 'Jboss Users manage by puppet',
@@ -32,6 +32,14 @@ node 'pserver' {
 	command => '/usr/bin/rsync -az /home/puppet/ /puppet-backup/',
 	hour => '04',
 	minute => '00',
+	}
+#########################
+
+$site_name = 'cat-pictures'
+$site_domain = 'cat-pictures.com'
+	file { "/etc/nginx/conf.d/${site_name}.conf":
+	content => template('nginx/vhost.conf.erb'),
+	notify => Service['nginx'],
 	}
 
 

@@ -12,8 +12,9 @@ class nginx {
 	file { '/var/www/cat-pictures/index.html':
 	source => 'puppet:///modules/nginx/index.html',
 	}
-	file { '/etc/nginx/conf.d/cat-pictures.conf':
-	source => 'puppet:///modules/nginx/cat-pictures.conf',
+	file { '/etc/nginx/conf.d/cat.conf':
+	#source => 'puppet:///modules/nginx/cat-pictures.conf',
+	ensure => absent,	
 	notify => Service['nginx'],
 	}
 	
