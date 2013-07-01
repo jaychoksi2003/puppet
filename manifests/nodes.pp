@@ -23,8 +23,8 @@ node 'pserver' {
 	}
 
 	exec { 'lab-dns':
-	command => '/bin/echo nameserver 10.122.90.11 > /etc/resolv.conf',
-	unless => '/bin/grep 10.122.90.11 /etc/resolv.conf',
+	command => 'echo nameserver 10.122.90.11 > /etc/resolv.conf',
+	unless =>  'grep 10.122.90.11 /etc/resolv.conf',
 	}
 
 
@@ -37,7 +37,7 @@ node 'pclient' {
 	include ssh
 
 	exec { 'lab-dns':
-	command => '/bin/echo nameserver 10.122.90.11 > /etc/resolv.conf',
-	unless => '/bin/grep 10.122.90.11 /etc/resolv.conf',
+	command => 'echo nameserver 10.122.90.11 > /etc/resolv.conf',
+	unless => 'grep 10.122.90.11 /etc/resolv.conf',
 	}
 }
