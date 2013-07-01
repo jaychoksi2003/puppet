@@ -75,6 +75,22 @@ node 'pclient' {
         minute => '*/5',
 	user => 'git'
         }
+################################
+
+
+	file { '/etc/httpd/conf.d/cat-pictures.conf':
+	ensure => absent,
+	}
+
+
+$site_name = 'pclient'
+$site_domain = 'pclient.vms.spastp.cisco.com'
+        file { "/etc/httpd/conf.d/${site_name}.conf":
+        content => template('httpd/vhost.conf.erb'),
+        notify => Service['httpd'],
+        }
+
+
 
 
 }
