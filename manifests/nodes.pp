@@ -73,12 +73,12 @@ node 'pclient' {
 	}
 
 
-$site_name = 'pclient'
-$site_domain = 'pclient.vms.spastp.cisco.com'
-        file { "/etc/httpd/conf.d/${site_name}.conf":
-        content => template('httpd/vhost.conf.erb'),
-        notify => Service['httpd'],
-        }
+#$site_name = 'pclient'
+#$site_domain = 'pclient.vms.spastp.cisco.com'
+#        file { "/etc/httpd/conf.d/${site_name}.conf":
+#        content => template('httpd/vhost.conf.erb'),
+#        notify => Service['httpd'],
+#        }
 
 	file { "/var/www/html/${site_name}/index.html":
         source => 'puppet:///modules/httpd/index.html',
