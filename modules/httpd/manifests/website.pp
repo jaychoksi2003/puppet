@@ -1,5 +1,5 @@
 # Manage an Http virtual host
-define http::website( $site_domain ) {
+define httpd::website( $site_domain ) {
 	include httpd
 	$site_name = $name
 

@@ -84,12 +84,9 @@ $site_domain = 'pclient.vms.spastp.cisco.com'
         source => 'puppet:///modules/httpd/index.html',
         }
 
-	http::website { 'pclient':
+	httpd::website { 'pclient':
         site_domain => 'pclient.vms.spastp.cisco.com',
         }
-#        nginx::website { 'adorable-animals':
-#        site_domain => 'adorable-animals.com',
-#        }
 
 
 
