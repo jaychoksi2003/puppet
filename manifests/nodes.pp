@@ -30,13 +30,12 @@ node 'pserver' {
 	}
 #########################
 
-$site_name = 'cat-pictures'
-$site_domain = 'cat-pictures.com'
-	file { "/etc/nginx/conf.d/${site_name}.conf":
-	content => template('nginx/vhost.conf.erb'),
-	notify => Service['nginx'],
+	nginx::website { 'cat-pictures':
+        site_domain => 'cat-pictures.com',
+        }
+	nginx::website { 'adorable-animals':
+	site_domain => 'adorable-animals.com',
 	}
-
 
 }
 
@@ -84,6 +83,13 @@ $site_domain = 'pclient.vms.spastp.cisco.com'
 	file { "/var/www/html/${site_name}/index.html":
         source => 'puppet:///modules/httpd/index.html',
         }
+
+	http::website { 'pclient':
+        site_domain => 'pclient.vms.spastp.cisco.com',
+        }
+#        nginx::website { 'adorable-animals':
+#        site_domain => 'adorable-animals.com',
+#        }
 
 
 
