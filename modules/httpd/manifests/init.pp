@@ -9,9 +9,9 @@ class httpd {
 	enable => true,
 	}
 
-	file { '/var/www/html/cat-pictures/index.html':
-	source => 'puppet:///modules/httpd/index.html',
-	}
+#	file { '/var/www/html/cat-pictures/index.html':
+#	source => 'puppet:///modules/httpd/index.html',
+#	}
 
 	#file { '/etc/httpd/conf.d/cat-pictures.conf':
 	#source => 'puppet:///modules/httpd/cat-pictures.conf',
