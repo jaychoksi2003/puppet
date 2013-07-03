@@ -3,6 +3,8 @@ node 'pserver' {
 	include httpd
 	include git
 	include labdns
+	include epel
+	include	nagios
 ################################## Custom Modification ####################
 	user { 'jboss':
 	ensure => present,
@@ -45,6 +47,7 @@ node 'pclient' {
 	#include git
 	include ssh
 	include labdns
+	include epel
 
 	user { 'git':
         ensure => present,
