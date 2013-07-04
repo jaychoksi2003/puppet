@@ -16,7 +16,7 @@ define httpd::website( $site_domain ) {
 	}
 
 	file { "/var/www/html/${site_name}/index.html":
-        source => 'puppet:///modules/nginx/index.html',
+        source => 'puppet:///modules/httpd/index.html',
 	mode => 755,
         owner => "apache",
 	group  => "apache",
