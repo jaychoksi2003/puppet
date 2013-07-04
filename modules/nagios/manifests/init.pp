@@ -9,19 +9,17 @@ class nagios {
         enable => true,
         }
 
-}
-class httpd {
-        
-	service { 'httpd':
-        ensure => running,
-        require => Package['httpd'],
-        enable => true,
-        }
-
 	file { '/etc/httpd/conf.d/nagios.conf':
         source => 'puppet:///modules/nagios/nagios.conf',
         notify => Service['httpd'],
         }
+
+	file { '/etc/nagios/nagios.cfg':
+        source => 'puppet:///modules/nagios/nagios.cfg',
+        notify => Service['nagios'],
+        }
+
+
 
 
 }
