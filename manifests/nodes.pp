@@ -65,6 +65,7 @@ node 'pclient' {
 	include ssh
 	include labdns
 	include epel
+	include nagiosclient
 
 	user { 'git':
         ensure => present,
