@@ -9,4 +9,12 @@ class nagiosclient {
         enable => true,
         }
 
+	file { "/etc/nagios/nrpe.conf":
+        content => template('nagiosclient/nrpe.conf.erb'),
+	mode => 644,
+        owner => "root",
+        group  => "root",
+        notify => Service['nrpe'],
+        }
+nagios_server => pserver,
 }

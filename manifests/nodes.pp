@@ -105,4 +105,10 @@ node 'pclient' {
 
 ###########################################
 
+
+	#nagios::client { 'nagiosclient-pclient':
+        #nagios_server  => 'pserver',
+        #}
+
+
 }
