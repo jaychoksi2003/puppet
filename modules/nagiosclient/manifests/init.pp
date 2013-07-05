@@ -16,5 +16,5 @@ class nagiosclient {
         group  => "root",
         notify => Service['nrpe'],
         }
-$nagios_server = pserver,
+$nagios_server = pserver
 }
