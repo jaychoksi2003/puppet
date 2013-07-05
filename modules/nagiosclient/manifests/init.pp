@@ -9,8 +9,8 @@ class nagiosclient {
         enable => true,
         }
 
-	file { "/etc/nagios/nrpe.conf":
-        content => template('nagiosclient/nrpe.conf.erb'),
+	file { "/etc/nagios/nrpe.cfg":
+        content => template('nagiosclient/nrpe.cfg.erb'),
 	mode => 644,
         owner => "root",
         group  => "root",
