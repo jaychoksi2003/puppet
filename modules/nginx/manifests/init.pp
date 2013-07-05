@@ -12,6 +12,10 @@ class nginx {
 	file { '/etc/nginx/nginx.conf':
         source => 'puppet:///modules/nginx/nginx.conf',
         notify => Service['nginx'],
+	owner => root,
+        group   => root,
+        mode    => 644,
+
         }
 	
 }

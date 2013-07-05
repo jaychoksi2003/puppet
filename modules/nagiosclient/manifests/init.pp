@@ -3,10 +3,10 @@ class nagiosclient {
         ensure => installed,
         }
 
-        #service { 'nrpe':
-        #ensure => running,
-        #require => Package['nagiosclient'],
-        #enable => true,
-        #}
+        service { 'nrpe':
+        ensure => running,
+        require => Package['nrpe.x86_64', 'nagios-plugins', 'nagios-plugins-all'],
+        enable => true,
+        }
 
 }
