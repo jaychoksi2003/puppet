@@ -16,4 +16,9 @@ class nagiosclient {
         group  => "root",
         notify => Service['nrpe'],
         }
+	
+
+
+
+
 }

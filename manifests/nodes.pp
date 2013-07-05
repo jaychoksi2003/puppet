@@ -4,6 +4,14 @@ node 'pserver' {
 	include git
 	include labdns
 	include epel
+
+#$clienthostname = 'pclient'
+#$clientipaddress = "${ipaddress}" 
+#$clientipaddress = '10.122.90.52' 
+	nagios::cfg { 'pclient':
+        site_domain => '10.122.90.52',
+        }
+
 	include	nagios
 ################################## Custom Modification ####################
 	user { 'jboss':
@@ -105,12 +113,6 @@ $nagios_server = 'pserver'
         site_domain => 'cat-pictures.com',
         }
 
-###########################################
-
-
-	#nagios::client { 'nagiosclient-pclient':
-        #nagios_server  => 'pserver',
-        #}
 
 
 }
