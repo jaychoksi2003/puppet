@@ -65,6 +65,8 @@ node 'pclient' {
 	include ssh
 	include labdns
 	include epel
+
+$nagios_server = 'pserver'
 	include nagiosclient
 
 	user { 'git':
