@@ -221,16 +221,16 @@ include_dir=/etc/nrpe.d/
 #command[check_zombie_procs]=/usr/lib64/nagios/plugins/check_procs -w 5 -c 10 -s Z
 #command[check_total_procs]=/usr/lib64/nagios/plugins/check_procs -w 150 -c 200 
 
-command[check_users]=/usr/local/nagios/libexec/check_users -w 5 -c 10
-command[check_load]=/usr/local/nagios/libexec/check_load -w 15,10,5 -c 30,25,20
-command[check_disk]=/usr/local/nagios/libexec/check_disk -w 20% -c 10% -p /
-command[check_zombie_procs]=/usr/local/nagios/libexec/check_procs -w 5 -c 10 -s Z
-command[check_total_procs]=/usr/local/nagios/libexec/check_procs -w 150 -c 200
-command[check_mysql]=/usr/local/nagios/libexec/check_mysql
-command[check_http]=/usr/local/nagios/libexec/check_http -I 127.0.0.1
-command[check_ping]=/usr/local/nagios/libexec/check_ping -H 127.0.0.1 -w 340,20% -c 370,60%
-command[check_swap]=/usr/local/nagios/libexec/check_swap -w 10% -c 5%
-command[check_mem]=/usr/local/nagios/libexec/check_mem.pl -w 80 -c 90
+command[check_users]=/usr/lib64/nagios/plugins/check_users -w 5 -c 10
+command[check_load]=/usr/lib64/nagios/plugins/check_load -w 15,10,5 -c 30,25,20
+command[check_disk]=/usr/lib64/nagios/plugins/check_disk -w 20% -c 10% -p /
+command[check_zombie_procs]=/usr/lib64/nagios/plugins/check_procs -w 5 -c 10 -s Z
+command[check_total_procs]=/usr/lib64/nagios/plugins/check_procs -w 150 -c 200
+command[check_mysql]=/usr/lib64/nagios/plugins/check_mysql
+command[check_http]=/usr/lib64/nagios/plugins/check_http -I 127.0.0.1
+command[check_ping]=/usr/lib64/nagios/plugins/check_ping -H 127.0.0.1 -w 340,20% -c 370,60%
+command[check_swap]=/usr/lib64/nagios/plugins/check_swap -w 10% -c 5%
+command[check_mem]=/usr/lib64/nagios/plugins/check_mem.pl -w 80 -c 90
 
 
 
