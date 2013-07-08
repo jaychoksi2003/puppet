@@ -74,7 +74,7 @@ node 'pclient' {
 	include labdns
 	include epel
 
-$nagios_server = 'pserver'
+$nagios_server = 'pserver', '13.23.196.100'
 	include nagiosclient
 
 	user { 'git':
