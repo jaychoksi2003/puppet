@@ -1,5 +1,5 @@
 class nagiosclient {
-	package { [ 'nrpe.x86_64', 'nagios-plugins', 'nagios-plugins-all']:	
+	package { [ 'nrpe.x86_64', 'nagios-plugins', 'nagios-plugins-all', 'nagios-plugins-nrpe']:	
         ensure => installed,
         }
 
