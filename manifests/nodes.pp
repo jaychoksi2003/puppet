@@ -4,15 +4,15 @@ node 'pserver' {
 	include git
 	include labdns
 	include epel
-
-#$clienthostname = 'pclient'
-#$clientipaddress = "${ipaddress}" 
-#$clientipaddress = '10.122.90.52' 
+	include nagios
+########################## nagiso node declaration ###########
 	nagios::addclient { 'pclient':
         site_domain => '10.122.90.52',
         }
 
-	include	nagios
+	nagios::addclient { 'RequestTracker':
+        site_domain => 'rt',
+        }
 ################################## Custom Modification ####################
 	user { 'jboss':
 	ensure => present,
@@ -115,4 +115,10 @@ $nagios_server = 'pserver'
 
 
 
+}
+
+node 'rt' {
+        include epel
+$nagios_server = 'pserver'
+        include nagiosclient
 }
