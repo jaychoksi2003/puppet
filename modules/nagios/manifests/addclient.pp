@@ -1,4 +1,4 @@
-define nagios::cfg( $site_domain ) {
+define nagios::addclient( $site_domain ) {
         include nagios
         $site_name = $name
 
@@ -6,3 +6,4 @@ define nagios::cfg( $site_domain ) {
         content => template('nagios/others.cfg.erb'),
         notify => Service['nagios'],
         }
+}

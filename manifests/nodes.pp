@@ -8,7 +8,7 @@ node 'pserver' {
 #$clienthostname = 'pclient'
 #$clientipaddress = "${ipaddress}" 
 #$clientipaddress = '10.122.90.52' 
-	nagios::cfg { 'pclient':
+	nagios::addclient { 'pclient':
         site_domain => '10.122.90.52',
         }
 
