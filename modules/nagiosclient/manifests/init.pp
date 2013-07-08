@@ -17,6 +17,13 @@ class nagiosclient {
         notify => Service['nrpe'],
         }
 	
+	file { "/usr/lib64/nagios/plugins/check_mem.pl":
+        source => 'puppet:///modules/nagiosclient/check_mem.pl',
+	mode => 755,
+        owner => "root",
+        group  => "root",
+        }
+	
 
 
 

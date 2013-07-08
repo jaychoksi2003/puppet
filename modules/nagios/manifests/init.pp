@@ -19,6 +19,15 @@ class nagios {
         notify => Service['nagios'],
         }
 
+	file { "/usr/lib64/nagios/plugins/check_mem.pl":
+        source => 'puppet:///modules/nagios/check_mem.pl',
+        mode => 755,
+        owner => "root",
+        group  => "root",
+        }
+
+
+
 	file { [ '/etc/nagios/objects/servers' ]:
 	ensure => directory,
 	}
