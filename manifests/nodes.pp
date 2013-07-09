@@ -117,7 +117,7 @@ $nagios_server = 'pserver'
 
 }
 
-node 'rt' {
+node 'helpdesk' {
         include epel
 $nagios_server = 'pserver'
         include nagiosclient
