@@ -122,3 +122,7 @@ node 'helpdesk' {
 $nagios_server = 'pserver'
         include nagiosclient
 }
+
+node 'nagios' {
+	include nagios
+}
