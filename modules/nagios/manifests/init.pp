@@ -32,6 +32,23 @@ class nagios {
 	ensure => directory,
 	}
 
+	file { "/etc/nagios/objects/servers/services.cfg":
+        content => template('nagios/services.cfg.erb'),
+        mode => 644,
+        owner => "root",
+        group  => "root",
+        notify => Service['nagios'],
+        }
+		
+		
+	file { "/etc/nagios/objects/servers/group.cfg":
+        content => template('nagios/group.cfg.erb'),
+        mode => 644,
+        owner => "root",
+        group  => "root",
+        notify => Service['nagios'],
+        }
+
 	#file { "/etc/nagios/objects/servers/others.cfg":
         #content => template('nagios/others.cfg.erb'),
         #mode => 644,

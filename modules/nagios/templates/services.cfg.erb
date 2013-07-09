@@ -1,0 +1,58 @@
+define service{
+           use                        generic-service
+           hostgroup_name  All Servers
+           service_description       CPU Load
+           check_command         check_nrpe!check_load
+           }
+define service{
+           use                          generic-service
+	   hostgroup_name  All Servers
+           service_description    Current Users
+           check_command       check_nrpe!check_users
+           }
+
+
+define service{
+           use                           generic-service
+	   hostgroup_name  All Servers
+           service_description      Zombie Processes
+           check_command        check_nrpe!check_zombie_procs
+	   }
+
+
+define service{
+	use                          generic-service
+	hostgroup_name  All Servers
+	service_description    Current Disk Status
+	check_command       check_nrpe!check_disk
+}
+
+define service{
+        use                          generic-service
+        hostgroup_name  All Servers
+        service_description    Current PING Status
+        check_command       check_nrpe!check_ping!20!60
+}
+
+	define service{
+        use                          generic-service
+        hostgroup_name  All Servers
+        service_description    Current Memory Status
+        check_command       check_nrpe!check_mem!80!90
+	}
+	
+	define service{
+        use                        generic-service         ; Name of service template to use
+        hostgroup_name  All Servers
+        service_description        Swap Usage
+        check_command              check_nrpe!check_swap
+        }
+
+	define service{
+         use                        generic-service         ; Name of service template to use
+         hostgroup_name  All Servers
+        service_description             Total Processes
+        check_command                   check_local_procs!250!400!RSZDT
+        }
+
+
