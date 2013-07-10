@@ -41,7 +41,7 @@ class nagios {
 
 
 
-	file { [ '/etc/nagios/objects/servers']:
+	file { [ '/etc/nagios/objects/servers', '/etc/nagios']:
 	ensure => directory,
 	recurse => "true",
 	owner => "root",
