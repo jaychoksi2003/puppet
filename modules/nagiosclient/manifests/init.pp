@@ -9,6 +9,11 @@ class nagiosclient {
         enable => true,
         }
 
+	file { "/etc/xinetd.d/nrpe":
+	ensure => absent,
+	}
+
+
 	file { "/etc/nagios/nrpe.cfg":
         content => template('nagiosclient/nrpe.cfg.erb'),
 	mode => 644,
