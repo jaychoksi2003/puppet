@@ -124,6 +124,7 @@ $nagios_server = 'pserver'
 }
 
 node 'rtp-nms' {
+	include nagioscron
 	include nagios
 
 	nagios::addclient { 'RequestTracker':
