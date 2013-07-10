@@ -1,13 +1,26 @@
 class nagios {
-	package { ['nagios', 'nrpe', 'nagios-common', 'nagios-devel.x86_64', 'nagios-plugins', 'nagios-plugins-all', 'nagios-plugins-nrpe']:	
+	package { ['httpd', 'nagios', 'nrpe', 'nagios-common', 'nagios-devel.x86_64', 'nagios-plugins', 'nagios-plugins-all', 'nagios-plugins-nrpe']:	
         ensure => installed,
         }
 
-        service { 'nagios':
+#        service { 'httpd':
+#        ensure => running,
+#        require => Package['httpd'],
+#        enable => true,
+#        }
+
+	service { ['httpd', 'nagios']:
         ensure => running,
-        require => Package['nagios'],
+        require => Package['httpd', 'nagios'],
         enable => true,
         }
+
+
+#        service { 'nagios':
+#        ensure => running,
+#        require => Package['nagios'],
+#        enable => true,
+#        }
 
 	file { '/etc/httpd/conf.d/nagios.conf':
         source => 'puppet:///modules/nagios/nagios.conf',
