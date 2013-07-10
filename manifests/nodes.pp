@@ -123,6 +123,6 @@ $nagios_server = 'pserver'
         include nagiosclient
 }
 
-node 'nagios' {
+node 'rtp-nms' {
 	include nagios
 }
