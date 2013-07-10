@@ -116,13 +116,21 @@ $nagios_server = 'pserver'
 
 
 }
-
+###################     RTP Lab              ##########################################################
 node 'helpdesk' {
         include epel
-$nagios_server = 'pserver'
+$nagios_server = '13.23.196.100'
         include nagiosclient
 }
 
+node 'ktp-cms1' {
+        include epel
+$nagios_server = '13.23.196.100'
+        include nagiosclient
+}
+
+
+################### Below is NagiOS Server ###############################
 node 'rtp-nms' {
 	include nagioscron
 	include nagios
