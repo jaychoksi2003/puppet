@@ -125,4 +125,9 @@ $nagios_server = 'pserver'
 
 node 'rtp-nms' {
 	include nagios
+
+	nagios::addclient { 'RequestTracker':
+        site_domain => 'rt',
+        }
+
 }
