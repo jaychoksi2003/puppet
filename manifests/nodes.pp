@@ -125,6 +125,7 @@ $nagios_server = '13.23.196.100'
 
 node 'ktp-cms1' {
         include epel
+	include nagioscron
 $nagios_server = '13.23.196.100'
         include nagiosclient
 }
