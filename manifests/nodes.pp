@@ -129,5 +129,33 @@ node 'rtp-nms' {
 	nagios::addclient { 'RequestTracker':
         site_domain => 'rt',
         }
+	nagios::addclient { 'ktp-cms1':
+        site_domain => '13.23.201.133',
+        }
+
+	nagios::addclient { 'ktp-cms2':
+        site_domain => '13.23.201.135',
+        }
+		
+	nagios::addclient { 'ktp-cms3':
+        site_domain => '13.23.201.137',
+        }
+		
+	nagios::addclient { 'ktp-cms4':
+        site_domain => '13.23.201.139',
+        }
+		
+	nagios::addclient { 'ktp-cms5':
+        site_domain => '13.23.201.141',
+        }
+		
+	nagios::addclient { 'ktp-cms6':
+        site_domain => '13.23.201.142',
+        }
+		
+	nagios::addclient { 'ktp-web1':
+        site_domain => '13.23.201.146',
+        }
+
 
 }
