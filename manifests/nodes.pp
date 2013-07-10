@@ -132,6 +132,8 @@ node 'base'{
 
 node 'ktp-cms1' inherits 'base'{
 	}
+node 'ktp-cms2' inherits 'base'{
+	}
 
 
 ################### Below is NagiOS Server ###############################
