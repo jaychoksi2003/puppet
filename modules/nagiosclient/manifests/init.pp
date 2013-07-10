@@ -9,8 +9,14 @@ class nagiosclient {
         enable => true,
         }
 
+	service { 'xinetd':
+        ensure => running,
+        enable => true,
+        }
+
 	file { "/etc/xinetd.d/nrpe":
 	ensure => absent,
+	notify => Service['xinetd'],
 	}
 
 

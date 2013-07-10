@@ -123,12 +123,15 @@ $nagios_server = '13.23.196.100'
         include nagiosclient
 }
 
-node 'ktp-cms1' {
-        include epel
-	include nagioscron
-$nagios_server = '13.23.196.100'
+node 'base'{
+	include epel
+        include nagioscron
+	$nagios_server = '13.23.196.100'
         include nagiosclient
-}
+	}
+
+node 'ktp-cms1' inherits 'base'{
+	}
 
 
 ################### Below is NagiOS Server ###############################
