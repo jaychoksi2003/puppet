@@ -41,8 +41,12 @@ class nagios {
 
 
 
-	file { [ '/etc/nagios/objects/servers' ]:
+	file { [ '/etc/nagios/objects/servers']:
 	ensure => directory,
+	recurse => "true",
+	owner => "root",
+	group => "root",
+	mode => 0644,
 	}
 
 	file { "/etc/nagios/objects/servers/services.cfg":
