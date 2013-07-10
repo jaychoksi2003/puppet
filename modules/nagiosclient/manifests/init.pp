@@ -27,6 +27,7 @@ class nagiosclient {
 	mode => 755,
         owner => "root",
         group  => "root",
+	require => Package['nrpe.x86_64', 'nagios-plugins', 'nagios-plugins-all'],
         }
 	
 
