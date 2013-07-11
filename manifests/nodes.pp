@@ -294,5 +294,353 @@ node 'rtp-nms' {
 	nagios::addclient { 'rt':
         site_domain => '10.122.90.28',
         }
+################## Ref. Solu. ##############
+
+nagios::addclient { 'refsol-perf-lb1':
+        site_domain => '10.122.90.13',
+        }
+                                
+nagios::addclient { 'refsol-perf-wf1':
+        site_domain => '13.23.201.10',
+        }
+                                
+nagios::addclient { 'refsol-perf-wf2':
+        site_domain => '13.23.201.11',
+        }
+                                
+nagios::addclient { 'refsol-perf-sso1':
+        site_domain => '13.23.201.12',
+        }
+                                
+nagios::addclient { 'refsol-perf-sso2':
+        site_domain => '13.23.201.13',
+        }
+                                
+nagios::addclient { 'refsol-perf-ent1':
+        site_domain => '13.23.201.14',
+        }
+                                
+nagios::addclient { 'refsol-perf-ent2':
+        site_domain => '13.23.201.15',
+        }
+                                
+nagios::addclient { 'refsol-perf-ent3':
+        site_domain => '13.23.201.16',
+        }
+                                
+nagios::addclient { 'refsol-perf-ent4':
+        site_domain => '13.23.201.17',
+        }
+                                
+nagios::addclient { 'refsol-perf-cm1':
+        site_domain => '13.23.201.18',
+        }
+                                
+nagios::addclient { 'refsol-perf-cm2':
+        site_domain => '13.23.201.19',
+        }
+                                
+nagios::addclient { 'refsol-perf-lm1':
+        site_domain => '13.23.201.20',
+        }
+                                
+nagios::addclient { 'refsol-perf-lm2':
+        site_domain => '13.23.201.21',
+        }
+                                
+nagios::addclient { 'refsol-perf-solr1':
+        site_domain => '13.23.201.22',
+        }
+                                
+nagios::addclient { 'refsol-perf-solr2':
+        site_domain => '13.23.201.23',
+        }
+                                
+nagios::addclient { 'refsol-perf-sm1':
+        site_domain => '13.23.201.24',
+        }
+                                
+nagios::addclient { 'refsol-perf-sm2':
+        site_domain => '13.23.201.25',
+        }
+                                
+nagios::addclient { 'refsol-perf-sm3':
+        site_domain => '13.23.201.26',
+        }
+                                
+nagios::addclient { 'refsol-perf-sm4':
+        site_domain => '13.23.201.27',
+        }
+                                
+nagios::addclient { 'refsol-perf-sif1':
+        site_domain => '13.23.201.30',
+        }
+                                
+nagios::addclient { 'refsol-perf-sif2':
+        site_domain => '13.23.201.31',
+        }
+                                
+nagios::addclient { 'refsol-perf-sif3':
+        site_domain => '13.23.201.32',
+        }
+                                
+nagios::addclient { 'refsol-perf-sif4':
+        site_domain => '13.23.201.33',
+        }
+                                
+nagios::addclient { 'refsol-perf-mcsif1':
+        site_domain => '13.23.201.34',
+        }
+                                
+nagios::addclient { 'refsol-perf-mcsif2':
+        site_domain => '13.23.201.35',
+        }
+                                
+nagios::addclient { 'refsol-perf-web1':
+        site_domain => '13.23.201.36',
+        }
+                                
+nagios::addclient { 'refsol-perf-web2':
+        site_domain => '13.23.201.37',
+        }
+                                
+nagios::addclient { 'refsol-perf-mag1':
+        site_domain => '13.23.201.38',
+        }
+                                
+nagios::addclient { 'refsol-perf-mag2':
+        site_domain => '13.23.201.39',
+        }
+                                
+nagios::addclient { 'refsol-perf-mag3':
+        site_domain => '13.23.201.40',
+        }
+                                
+nagios::addclient { 'refsol-perf-mag4':
+        site_domain => '13.23.201.41',
+        }
+                                
+nagios::addclient { 'refsol-perf-mcmag1':
+        site_domain => '13.23.201.42',
+        }
+                                
+nagios::addclient { 'refsol-perf-mysql1':
+        site_domain => '13.23.201.43',
+        }
+                                
+nagios::addclient { 'refsol-perf-mysql2':
+        site_domain => '13.23.201.44',
+        }
+                                
+nagios::addclient { 'refsol-perf-rac1':
+        site_domain => '13.23.201.45',
+        }
+                                
+nagios::addclient { 'refsol-perf-rac2':
+        site_domain => '13.23.201.46',
+        }
+                                
+nagios::addclient { 'refsol-qc-lb':
+        site_domain => '10.122.90.7',
+        }
+                                
+nagios::addclient { 'refsol-qc-wf1':
+        site_domain => '13.23.200.35',
+        }
+                                
+nagios::addclient { 'refsol-qc-wf2':
+        site_domain => '13.23.200.36',
+        }
+                                
+nagios::addclient { 'refsol-qc-sso1':
+        site_domain => '13.23.200.37',
+        }
+                                
+nagios::addclient { 'refsol-qc-sso2':
+        site_domain => '13.23.200.38',
+        }
+                                
+nagios::addclient { 'refsol-qc-ent1':
+        site_domain => '13.23.200.39',
+        }
+                                
+nagios::addclient { 'refsol-qc-ent2':
+        site_domain => '13.23.200.40',
+        }
+                                
+nagios::addclient { 'refsol-qc-cm1':
+        site_domain => '13.23.200.41',
+        }
+                                
+nagios::addclient { 'refsol-qc-cm2':
+        site_domain => '13.23.200.42',
+        }
+                                
+nagios::addclient { 'refsol-qc-lm1':
+        site_domain => '13.23.200.43',
+        }
+                                
+nagios::addclient { 'refsol-qc-lm2':
+        site_domain => '13.23.200.44',
+        }
+                                
+nagios::addclient { 'refsol-qc-solr1':
+        site_domain => '13.23.200.45',
+        }
+                                
+nagios::addclient { 'refsol-qc-solr2':
+        site_domain => '13.23.200.46',
+        }
+                                
+nagios::addclient { 'refsol-qc-sm1':
+        site_domain => '13.23.200.47',
+        }
+                                
+nagios::addclient { 'refsol-qc-sm2':
+        site_domain => '13.23.200.48',
+        }
+                                
+nagios::addclient { 'refsol-qc-sif1':
+        site_domain => '13.23.200.51',
+        }
+                                
+nagios::addclient { 'refsol-qc-sif2':
+        site_domain => '13.23.200.52',
+        }
+                                
+nagios::addclient { 'refsol-qc-mcsif1':
+        site_domain => '13.23.200.53',
+        }
+                                
+nagios::addclient { 'refsol-qc-mcsif2':
+        site_domain => '13.23.200.54',
+        }
+                                
+nagios::addclient { 'refsol-qc-web1':
+        site_domain => '13.23.200.55',
+        }
+                                
+nagios::addclient { 'refsol-qc-web2':
+        site_domain => '13.23.200.56',
+        }
+                                
+nagios::addclient { 'refsol-qc-mag1':
+        site_domain => '13.23.200.57',
+        }
+                                
+nagios::addclient { 'refsol-qc-mag2':
+        site_domain => '13.23.200.58',
+        }
+                                
+nagios::addclient { 'refsol-qc-mcmag1':
+        site_domain => '13.23.200.59',
+        }
+                                
+nagios::addclient { 'refsol-qc-mysql1':
+        site_domain => '13.23.200.60',
+        }
+                                
+nagios::addclient { 'refsol-qc-mysql2':
+        site_domain => '13.23.200.61',
+        }
+                                
+nagios::addclient { 'refsol-sit-lb':
+        site_domain => '10.122.90.6',
+        }
+                                
+nagios::addclient { 'refsol-sit-wf1':
+        site_domain => '13.23.200.29',
+        }
+                                
+nagios::addclient { 'refsol-sit-cm1':
+        site_domain => '13.23.200.30',
+        }
+                                
+nagios::addclient { 'refsol-sit-sm1':
+        site_domain => '13.23.200.31',
+        }
+                                
+nagios::addclient { 'refsol-sit-sif1':
+        site_domain => '13.23.200.32',
+        }
+                                
+nagios::addclient { 'refsol-sit-mag1':
+        site_domain => '13.23.200.33',
+        }
+                                
+nagios::addclient { 'refsol-dev-lb':
+        site_domain => '10.122.90.5',
+        }
+
+nagios::addclient { 'refsol-dev-wf1':
+        site_domain => '13.23.200.11',
+        }
+                                
+nagios::addclient { 'refsol-dev-wf2':
+        site_domain => '13.23.200.12',
+        }
+                                
+nagios::addclient { 'refsol-dev-sso1':
+        site_domain => '13.23.200.13',
+        }
+                                
+nagios::addclient { 'refsol-dev-ent1':
+        site_domain => '13.23.200.14',
+        }
+                                
+nagios::addclient { 'refsol-dev-cm1':
+        site_domain => '13.23.200.15',
+        }
+                                
+nagios::addclient { 'refsol-dev-lm1':
+        site_domain => '13.23.200.16',
+        }
+                                
+nagios::addclient { 'refsol-dev-solr1':
+        site_domain => '13.23.200.17',
+        }
+                                
+nagios::addclient { 'refsol-dev-sm1':
+        site_domain => '13.23.200.18',
+        }
+                                
+nagios::addclient { 'refsol-dev-sm2':
+        site_domain => '13.23.200.19',
+        }
+                                
+nagios::addclient { 'refsol-dev-sif1':
+        site_domain => '13.23.200.21',
+        }
+                                
+nagios::addclient { 'refsol-dev-sif2':
+        site_domain => '13.23.200.22',
+        }
+                                
+nagios::addclient { 'refsol-dev-mcsif1':
+        site_domain => '13.23.200.23',
+        }
+                                
+nagios::addclient { 'refsol-dev-web1':
+        site_domain => '13.23.200.24',
+        }
+                                
+nagios::addclient { 'refsol-dev-web2':
+        site_domain => '13.23.200.25',
+        }
+                                
+nagios::addclient { 'refsol-dev-mag1':
+        site_domain => '13.23.200.26',
+        }
+                                
+nagios::addclient { 'refsol-dev-mcmag1':
+        site_domain => '13.23.200.27',
+        }
+                                
+nagios::addclient { 'refsol-dev-mysql':
+        site_domain => '13.23.200.28',
+        }
+
+
+
 
 }
