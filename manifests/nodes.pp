@@ -117,11 +117,6 @@ $nagios_server = 'pserver'
 
 }
 ###################     RTP Lab              ##########################################################
-node 'helpdesk' {
-        include epel
-$nagios_server = '13.23.196.100'
-        include nagiosclient
-}
 
 node 'base'{
 	include epel
@@ -148,15 +143,13 @@ node 'base'{
 	}
 
 	node 'vms-dns' inherits 'base'{ }
+	node 'helpdesk' inherits 'base'{ } #Request Tracker
 
 ################### Below is NagiOS Server ###############################
 node 'rtp-nms' {
 	include nagioscron
 	include nagios
 
-	nagios::addclient { 'RequestTracker':
-        site_domain => 'rt',
-        }
 	nagios::addclient { 'ktp-cms1':
         site_domain => '13.23.201.133',
         }
