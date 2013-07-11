@@ -129,18 +129,22 @@ node 'base'{
 	$nagios_server = '13.23.196.100'
         include nagiosclient
 	}
-
-node 'ktp-cms1' inherits 'base'{
+#node /^web\d+\.example\.com$/ { }
+#	node /^ktp-cms\d+\$/ { }
+	
+	node 'ktp-cms1' inherits 'base'{
 	}
-node 'ktp-cms2' inherits 'base'{
+	node 'ktp-cms2' inherits 'base'{
 	}
-node 'ktp-cms3' inherits 'base'{
+	node 'ktp-cms3' inherits 'base'{
 	}
-node 'ktp-cms4' inherits 'base'{
+	node 'ktp-cms4' inherits 'base'{
 	}
-node 'ktp-cms5' inherits 'base'{
+	node 'ktp-cms5' inherits 'base'{
 	}
-node 'ktp-cms6' inherits 'base'{
+	node 'ktp-cms6' inherits 'base'{
+	}
+	node 'ktp-web1' inherits 'base'{
 	}
 
 
@@ -179,6 +183,34 @@ node 'rtp-nms' {
 	nagios::addclient { 'ktp-web1':
         site_domain => '13.23.201.146',
         }
+############ Others ######################
 
+	nagios::addclient { 'vms-dns':
+        site_domain => '10.122.90.11',
+        }
+		
+	nagios::addclient { 'smtp1':
+        site_domain => '10.122.90.25',
+        }
+		
+	nagios::addclient { 'ci-01':
+        site_domain => '10.122.90.10',
+        }
+		
+	nagios::addclient { 'JRebel':
+        site_domain => '10.122.90.18',
+        }
+		
+	nagios::addclient { 'DHCP':
+        site_domain => '10.122.90.22',
+        }
+		
+	nagios::addclient { 'ktp-app':
+        site_domain => '10.122.90.12',
+        }
+		
+	nagios::addclient { 'rt':
+        site_domain => '10.122.90.28',
+        }
 
 }
