@@ -145,6 +145,7 @@ node 'base'{
 	node 'ktp-app' inherits 'base'{ } 
 
 ################ RefSol Servers ##############################
+node 'refsol-perf-lb1' inherits 'base'{ }
 node 'refsol-perf-wf1' inherits 'base'{ }
 node 'refsol-perf-wf2' inherits 'base'{ }
 node 'refsol-perf-sso1' inherits 'base'{ }
