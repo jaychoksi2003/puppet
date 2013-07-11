@@ -144,6 +144,7 @@ node 'base'{
 
 	node 'vms-dns' inherits 'base'{ }
 	node 'helpdesk' inherits 'base'{ } #Request Tracker
+	node 'smtp1' inherits 'base'{ } #Request Tracker
 
 ################### Below is NagiOS Server ###############################
 node 'rtp-nms' {
