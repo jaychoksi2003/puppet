@@ -145,7 +145,7 @@ node 'base'{
 	node 'vms-dns' inherits 'base'{ }
 	node 'helpdesk' inherits 'base'{ } #Request Tracker
 	node 'smtp1' inherits 'base'{ } 
-	node 'ci-01' inherits 'base'{ } 
+	node 'ci01' inherits 'base'{ } 
 	node 'JRebel' inherits 'base'{ } 
 	node 'dhcp' inherits 'base'{ } 
 	node 'ktp-app' inherits 'base'{ } 
