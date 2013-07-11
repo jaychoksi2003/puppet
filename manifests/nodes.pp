@@ -128,18 +128,13 @@ node 'base'{
 #	node /^ktp-cms\d+\$/ { }
 	
 	node 'ktp-cms1' inherits 'base'{ }
-	node 'ktp-cms2' inherits 'base'{
-	}
-	node 'ktp-cms3' inherits 'base'{
-	}
-	node 'ktp-cms4' inherits 'base'{
-	}
-	node 'ktp-cms5' inherits 'base'{
-	}
-	node 'ktp-cms6' inherits 'base'{
-	}
-	node 'ktp-web1' inherits 'base'{
-	}
+	node 'ktp-cms2' inherits 'base'{ }
+	node 'ktp-cms3' inherits 'base'{ }
+	node 'ktp-cms4' inherits 'base'{ }
+	node 'ktp-cms5' inherits 'base'{ }
+	node 'ktp-cms6' inherits 'base'{ }
+	node 'ktp-web1' inherits 'base'{ }
+	
 
 	node 'vms-dns' inherits 'base'{ }
 	node 'helpdesk' inherits 'base'{ } #Request Tracker
@@ -148,6 +143,94 @@ node 'base'{
 	node 'JRebel' inherits 'base'{ } 
 	node 'dhcp1' inherits 'base'{ } 
 	node 'ktp-app' inherits 'base'{ } 
+
+################ RefSol Servers ##############################
+node 'refsol-perf-wf1' inherits 'base'{ }
+node 'refsol-perf-wf2' inherits 'base'{ }
+node 'refsol-perf-sso1' inherits 'base'{ }
+node 'refsol-perf-sso2' inherits 'base'{ }
+node 'refsol-perf-ent1' inherits 'base'{ }
+node 'refsol-perf-ent2' inherits 'base'{ }
+node 'refsol-perf-ent3' inherits 'base'{ }
+node 'refsol-perf-ent4' inherits 'base'{ }
+node 'refsol-perf-cm1' inherits 'base'{ }
+node 'refsol-perf-cm2' inherits 'base'{ }
+node 'refsol-perf-lm1' inherits 'base'{ }
+node 'refsol-perf-lm2' inherits 'base'{ }
+node 'refsol-perf-solr1' inherits 'base'{ }
+node 'refsol-perf-solr2' inherits 'base'{ }
+node 'refsol-perf-sm1' inherits 'base'{ }
+node 'refsol-perf-sm2' inherits 'base'{ }
+node 'refsol-perf-sm3' inherits 'base'{ }
+node 'refsol-perf-sm4' inherits 'base'{ }
+node 'refsol-perf-sif1' inherits 'base'{ }
+node 'refsol-perf-sif2' inherits 'base'{ }
+node 'refsol-perf-sif3' inherits 'base'{ }
+node 'refsol-perf-sif4' inherits 'base'{ }
+node 'refsol-perf-mcsif1' inherits 'base'{ }
+node 'refsol-perf-mcsif2' inherits 'base'{ }
+node 'refsol-perf-web1' inherits 'base'{ }
+node 'refsol-perf-web2' inherits 'base'{ }
+node 'refsol-perf-mag1' inherits 'base'{ }
+node 'refsol-perf-mag2' inherits 'base'{ }
+node 'refsol-perf-mag3' inherits 'base'{ }
+node 'refsol-perf-mag4' inherits 'base'{ }
+node 'refsol-perf-mcmag1' inherits 'base'{ }
+node 'refsol-perf-mysql1' inherits 'base'{ }
+node 'refsol-perf-mysql2' inherits 'base'{ }
+node 'refsol-perf-rac1' inherits 'base'{ }
+node 'refsol-perf-rac2' inherits 'base'{ }
+node 'refsol-qc-lb' inherits 'base'{ }
+node 'refsol-qc-wf1' inherits 'base'{ }
+node 'refsol-qc-wf2' inherits 'base'{ }
+node 'refsol-qc-sso1' inherits 'base'{ }
+node 'refsol-qc-sso2' inherits 'base'{ }
+node 'refsol-qc-ent1' inherits 'base'{ }
+node 'refsol-qc-ent2' inherits 'base'{ }
+node 'refsol-qc-cm1' inherits 'base'{ }
+node 'refsol-qc-cm2' inherits 'base'{ }
+node 'refsol-qc-lm1' inherits 'base'{ }
+node 'refsol-qc-lm2' inherits 'base'{ }
+node 'refsol-qc-solr1' inherits 'base'{ }
+node 'refsol-qc-solr2' inherits 'base'{ }
+node 'refsol-qc-sm1' inherits 'base'{ }
+node 'refsol-qc-sm2' inherits 'base'{ }
+node 'refsol-qc-sif1' inherits 'base'{ }
+node 'refsol-qc-sif2' inherits 'base'{ }
+node 'refsol-qc-mcsif1' inherits 'base'{ }
+node 'refsol-qc-mcsif2' inherits 'base'{ }
+node 'refsol-qc-web1' inherits 'base'{ }
+node 'refsol-qc-web2' inherits 'base'{ }
+node 'refsol-qc-mag1' inherits 'base'{ }
+node 'refsol-qc-mag2' inherits 'base'{ }
+node 'refsol-qc-mcmag1' inherits 'base'{ }
+node 'refsol-qc-mysql1' inherits 'base'{ }
+node 'refsol-qc-mysql2' inherits 'base'{ }
+node 'refsol-sit-lb' inherits 'base'{ }
+node 'refsol-sit-wf1' inherits 'base'{ }
+node 'refsol-sit-cm1' inherits 'base'{ }
+node 'refsol-sit-sm1' inherits 'base'{ }
+node 'refsol-sit-sif1' inherits 'base'{ }
+node 'refsol-sit-mag1' inherits 'base'{ }
+node 'refsol-dev-lb' inherits 'base'{ }
+node 'refsol-dev-wf1' inherits 'base'{ }
+node 'refsol-dev-wf2' inherits 'base'{ }
+node 'refsol-dev-sso1' inherits 'base'{ }
+node 'refsol-dev-ent1' inherits 'base'{ }
+node 'refsol-dev-cm1' inherits 'base'{ }
+node 'refsol-dev-lm1' inherits 'base'{ }
+node 'refsol-dev-solr1' inherits 'base'{ }
+node 'refsol-dev-sm1' inherits 'base'{ }
+node 'refsol-dev-sm2' inherits 'base'{ }
+node 'refsol-dev-sif1' inherits 'base'{ }
+node 'refsol-dev-sif2' inherits 'base'{ }
+node 'refsol-dev-mcsif1' inherits 'base'{ }
+node 'refsol-dev-web1' inherits 'base'{ }
+node 'refsol-dev-web2' inherits 'base'{ }
+node 'refsol-dev-mag1' inherits 'base'{ }
+node 'refsol-dev-mcmag1' inherits 'base'{ }
+node 'refsol-dev-mysql' inherits 'base'{ }
+
 
 ################### Below is NagiOS Server ###############################
 node 'rtp-nms' {
