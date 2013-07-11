@@ -127,8 +127,7 @@ node 'base'{
 #node /^web\d+\.example\.com$/ { }
 #	node /^ktp-cms\d+\$/ { }
 	
-	node 'ktp-cms1' inherits 'base'{
-	}
+	node 'ktp-cms1' inherits 'base'{ }
 	node 'ktp-cms2' inherits 'base'{
 	}
 	node 'ktp-cms3' inherits 'base'{
@@ -147,7 +146,7 @@ node 'base'{
 	node 'smtp1' inherits 'base'{ } 
 	node 'ci01' inherits 'base'{ } 
 	node 'JRebel' inherits 'base'{ } 
-	node 'dhcp' inherits 'base'{ } 
+	node 'dhcp1' inherits 'base'{ } 
 	node 'ktp-app' inherits 'base'{ } 
 
 ################### Below is NagiOS Server ###############################
