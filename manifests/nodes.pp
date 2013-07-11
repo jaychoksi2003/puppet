@@ -147,6 +147,7 @@ node 'base'{
 	node 'ktp-web1' inherits 'base'{
 	}
 
+	node 'vms-dns' inherits 'base'{ }
 
 ################### Below is NagiOS Server ###############################
 node 'rtp-nms' {
