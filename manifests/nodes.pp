@@ -233,6 +233,77 @@ node 'refsol-dev-mcmag1' inherits 'base'{ }
 node 'refsol-dev-mysql' inherits 'base'{ }
 
 
+################## Verizon #############################################
+node 'vzzd2-mag' inherits 'base' { }
+node 'vzzd2-cms' inherits 'base' { }
+node 'vzzd2-mon' inherits 'base' { }
+node 'vzzd2-ol' inherits 'base' { }
+node 'vzzd2-rmq' inherits 'base' { }
+node 'spastp-vms-81' inherits 'base' { }
+node 'spastp-vms-82' inherits 'base' { }
+node 'spastp-vms-84' inherits 'base' { }
+node 'spastp-vms-85' inherits 'base' { }
+node 'spastp-vms-86' inherits 'base' { }
+node 'spastp-vms-87' inherits 'base' { }
+node 'spastp-vms-89' inherits 'base' { }
+node 'spastp-vms-90' inherits 'base' { }
+node 'spastp-vms-91' inherits 'base' { }
+node 'spastp-vms-92' inherits 'base' { }
+node 'spastp-vms-107' inherits 'base' { }
+node 'spastp-vms-108' inherits 'base' { }
+node 'spastp-vms-109' inherits 'base' { }
+node 'spastp-vms-111' inherits 'base' { }
+node 'spastp-vms-112' inherits 'base' { }
+node 'spastp-vms-113' inherits 'base' { }
+node 'spastp-vms-114' inherits 'base' { }
+node 'spastp-vms-115' inherits 'base' { }
+node 'spastp-vms-94' inherits 'base' { }
+node 'spastp-vms-100' inherits 'base' { }
+node 'spastp-vms-101' inherits 'base' { }
+node 'spastp-vms-102' inherits 'base' { }
+node 'spastp-vms-104' inherits 'base' { }
+node 'spastp-vms-105' inherits 'base' { }
+node 'spastp-vms-106' inherits 'base' { }
+node 'miagrbiorca00v' inherits 'base' { }
+node 'miagrbiorca01v' inherits 'base' { }
+node 'miagrbiorca02v' inherits 'base' { }
+node 'miagrbiorca03v' inherits 'base' { }
+node 'miagrbiorca04v' inherits 'base' { }
+node 'miagrbiorca05v' inherits 'base' { }
+node 'miagrbiorca06v' inherits 'base' { }
+node 'miagrbiorca07v' inherits 'base' { }
+node 'miagrbiorca08v' inherits 'base' { }
+node 'miagrbiorca09v' inherits 'base' { }
+node 'miagrbiorca10v' inherits 'base' { }
+node 'miagrbiorca11v' inherits 'base' { }
+node 'miagrbiorca12v' inherits 'base' { }
+node 'miagrbivmse01v' inherits 'base' { }
+node 'miagrbivmse02v' inherits 'base' { }
+node 'miagrbivmse03v' inherits 'base' { }
+node 'miagrbivmse04v' inherits 'base' { }
+node 'miagrbivmsf01v' inherits 'base' { }
+node 'miagrbivmsf02v' inherits 'base' { }
+node 'miagrbivmss01v' inherits 'base' { }
+node 'miagrbivmss02v' inherits 'base' { }
+node 'miagrbivmsc01v' inherits 'base' { }
+node 'miagrbivmsc02v' inherits 'base' { }
+node 'miagrbimdarb01' inherits 'base' { }
+node 'miagrbimdcd03' inherits 'base' { }
+node 'miagrbimdcd02' inherits 'base' { }
+node 'miagrbimdcd01' inherits 'base' { }
+node 'miagrbimdsap01' inherits 'base' { }
+node 'miagrbimdsas01' inherits 'base' { }
+node 'miagrbimdsbp01' inherits 'base' { }
+node 'miagrbimdsbs01' inherits 'base' { }
+node 'miagrbimema01v' inherits 'base' { }
+node 'miagrbimema02v' inherits 'base' { }
+node 'miagrbimgmd01' inherits 'base' { }
+node 'miagrbimgsd01' inherits 'base' { }
+node 'miagrbimgsd02' inherits 'base' { }
+node 'miagrbimgww01v' inherits 'base' { }
+node 'miagrbimgww02v' inherits 'base' { }
+node 'api-stg' inherits 'base' { }
+
 ################### Below is NagiOS Server ###############################
 node 'rtp-nms' {
 	include nagioscron
