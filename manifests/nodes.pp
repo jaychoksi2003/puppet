@@ -640,7 +640,282 @@ nagios::addclient { 'refsol-dev-mysql':
         site_domain => '13.23.200.28',
         }
 
-
+################ Verizon ####################
+nagios::addclient { 'vzzd2-mag':
+        site_domain => '13.23.201.68',
+        }
+                                
+nagios::addclient { 'vzzd2-cms':
+        site_domain => '13.23.201.69',
+        }
+                                
+nagios::addclient { 'vzzd2-mon':
+        site_domain => '13.23.201.70',
+        }
+                                
+nagios::addclient { 'vzzd2-ol':
+        site_domain => '13.23.201.71',
+        }
+                                
+nagios::addclient { 'vzzd2-rmq':
+        site_domain => '13.23.201.73',
+        }
+                                
+nagios::addclient { 'spastp-vms-81':
+        site_domain => '10.122.90.81',
+        }
+                                
+nagios::addclient { 'spastp-vms-82':
+        site_domain => '10.122.90.82',
+        }
+                                
+nagios::addclient { 'spastp-vms-84':
+        site_domain => '10.122.90.84',
+        }
+                                
+nagios::addclient { 'spastp-vms-85':
+        site_domain => '10.122.90.85',
+        }
+                                
+nagios::addclient { 'spastp-vms-86':
+        site_domain => '10.122.90.86',
+        }
+                                
+nagios::addclient { 'spastp-vms-87':
+        site_domain => '10.122.90.87',
+        }
+                                
+nagios::addclient { 'spastp-vms-89':
+        site_domain => '10.122.90.89',
+        }
+                                
+nagios::addclient { 'spastp-vms-90':
+        site_domain => '10.122.90.90',
+        }
+                                
+nagios::addclient { 'spastp-vms-91':
+        site_domain => '10.122.90.91',
+        }
+                                
+nagios::addclient { 'spastp-vms-92':
+        site_domain => '10.122.90.92',
+        }
+                                
+nagios::addclient { 'spastp-vms-107':
+        site_domain => '10.122.90.107',
+        }
+                                
+nagios::addclient { 'spastp-vms-108':
+        site_domain => '10.122.90.108',
+        }
+                                
+nagios::addclient { 'spastp-vms-109':
+        site_domain => '10.122.90.109',
+        }
+                                
+nagios::addclient { 'spastp-vms-111':
+        site_domain => '10.122.90.111',
+        }
+                                
+nagios::addclient { 'spastp-vms-112':
+        site_domain => '10.122.90.112',
+        }
+                                
+nagios::addclient { 'spastp-vms-113':
+        site_domain => '10.122.90.113',
+        }
+                                
+nagios::addclient { 'spastp-vms-114':
+        site_domain => '10.122.90.114',
+        }
+                                
+nagios::addclient { 'spastp-vms-115':
+        site_domain => '10.122.90.115',
+        }
+                                
+nagios::addclient { 'spastp-vms-94':
+        site_domain => '10.122.90.94',
+        }
+                                
+nagios::addclient { 'spastp-vms-100':
+        site_domain => '10.122.90.100',
+        }
+                                
+nagios::addclient { 'spastp-vms-101':
+        site_domain => '10.122.90.101',
+        }
+                                
+nagios::addclient { 'spastp-vms-102':
+        site_domain => '10.122.90.102',
+        }
+                                
+nagios::addclient { 'spastp-vms-104':
+        site_domain => '10.122.90.104',
+        }
+                                
+nagios::addclient { 'spastp-vms-105':
+        site_domain => '10.122.90.105',
+        }
+                                
+nagios::addclient { 'spastp-vms-106':
+        site_domain => '10.122.90.106',
+        }
+                                
+nagios::addclient { 'miagrbiorca00v':
+        site_domain => '13.23.193.10',
+        }
+                                
+nagios::addclient { 'miagrbiorca01v':
+        site_domain => '13.23.193.11',
+        }
+                                
+nagios::addclient { 'miagrbiorca02v':
+        site_domain => '13.23.193.12',
+        }
+                                
+nagios::addclient { 'miagrbiorca03v':
+        site_domain => '13.23.193.13',
+        }
+                                
+nagios::addclient { 'miagrbiorca04v':
+        site_domain => '13.23.193.14',
+        }
+                                
+nagios::addclient { 'miagrbiorca05v':
+        site_domain => '13.23.193.15',
+        }
+                                
+nagios::addclient { 'miagrbiorca06v':
+        site_domain => '13.23.193.16',
+        }
+                                
+nagios::addclient { 'miagrbiorca07v':
+        site_domain => '13.23.193.17',
+        }
+                                
+nagios::addclient { 'miagrbiorca08v':
+        site_domain => '13.23.193.18',
+        }
+                                
+nagios::addclient { 'miagrbiorca09v':
+        site_domain => '13.23.193.19',
+        }
+                                
+nagios::addclient { 'miagrbiorca10v':
+        site_domain => '13.23.193.20',
+        }
+                                
+nagios::addclient { 'miagrbiorca11v':
+        site_domain => '13.23.193.21',
+        }
+                                
+nagios::addclient { 'miagrbiorca12v':
+        site_domain => '13.23.193.22',
+        }
+                                
+nagios::addclient { 'miagrbivmse01v':
+        site_domain => '13.23.194.140',
+        }
+                                
+nagios::addclient { 'miagrbivmse02v':
+        site_domain => '13.23.194.141',
+        }
+                                
+nagios::addclient { 'miagrbivmse03v':
+        site_domain => '13.23.194.142',
+        }
+                                
+nagios::addclient { 'miagrbivmse04v':
+        site_domain => '13.23.194.143',
+        }
+                                
+nagios::addclient { 'miagrbivmsf01v':
+        site_domain => '13.23.193.27',
+        }
+                                
+nagios::addclient { 'miagrbivmsf02v':
+        site_domain => '13.23.193.28',
+        }
+                                
+nagios::addclient { 'miagrbivmss01v':
+        site_domain => '13.23.194.148',
+        }
+                                
+nagios::addclient { 'miagrbivmss02v':
+        site_domain => '13.23.194.149',
+        }
+                                
+nagios::addclient { 'miagrbivmsc01v':
+        site_domain => '13.23.194.150',
+        }
+                                
+nagios::addclient { 'miagrbivmsc02v':
+        site_domain => '13.23.194.151',
+        }
+                                
+nagios::addclient { 'miagrbimdarb01':
+        site_domain => '13.23.194.17',
+        }
+                                
+nagios::addclient { 'miagrbimdcd03':
+        site_domain => '13.23.194.16',
+        }
+                                
+nagios::addclient { 'miagrbimdcd02':
+        site_domain => '13.23.194.15',
+        }
+                                
+nagios::addclient { 'miagrbimdcd01':
+        site_domain => '13.23.194.14',
+        }
+                                
+nagios::addclient { 'miagrbimdsap01':
+        site_domain => '13.23.194.10',
+        }
+                                
+nagios::addclient { 'miagrbimdsas01':
+        site_domain => '13.23.194.12',
+        }
+                                
+nagios::addclient { 'miagrbimdsbp01':
+        site_domain => '13.23.194.11',
+        }
+                                
+nagios::addclient { 'miagrbimdsbs01':
+        site_domain => '13.23.194.13',
+        }
+                                
+nagios::addclient { 'miagrbimema01v':
+        site_domain => '13.23.194.23',
+        }
+                                
+nagios::addclient { 'miagrbimema02v':
+        site_domain => '13.23.194.24',
+        }
+                                
+nagios::addclient { 'miagrbimgmd01':
+        site_domain => '13.23.193.150',
+        }
+                                
+nagios::addclient { 'miagrbimgsd01':
+        site_domain => '13.23.193.151',
+        }
+                                
+nagios::addclient { 'miagrbimgsd02':
+        site_domain => '13.23.193.152',
+        }
+                                
+nagios::addclient { 'miagrbimgww01v':
+        site_domain => '13.23.193.25',
+        }
+                                
+nagios::addclient { 'miagrbimgww02v':
+        site_domain => '13.23.193.26',
+        }
+                                
+nagios::addclient { 'api-stg':
+        site_domain => '10.122.90.4',
+        }                          
 
 
 }
