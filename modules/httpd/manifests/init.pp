@@ -1,6 +1,6 @@
 class httpd {
-	package { 'httpd':
-	ensure => installed,
+	#package { 'httpd':
+	#ensure => installed,
 	}
 
 	#service { 'httpd':
