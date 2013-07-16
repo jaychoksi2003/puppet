@@ -25,9 +25,6 @@ class ssh {
 	ssh_authorized_key { 'Jay-Cisco':
 	user => 'root',
 	type => 'rsa',
-	key => 'AAAAB3NzaC1yc2EAAAABJQAAAIBRg9pBhApa62AuWIgyEO0552itbXyh8wP8PnqU
-bZI4d4YTQUSsG7m17o7o46X4or6ndzbhbgnIxz13xelDUYuj09ycVk2SXzAFp+Ro
-A9Xa//z4/kmA2PklAaFNp9w8TAYxcSSjVE2GjgY5cikvmMDEw2R4T0/o2FmxpbUT
-uO02iQ==',
+	key => 'AAAAB3NzaC1yc2EAAAABJQAAAIBRg9pBhApa62AuWIgyEO0552itbXyh8wP8PnqUbZI4d4YTQUSsG7m17o7o46X4or6ndzbhbgnIxz13xelDUYuj09ycVk2SXzAFp+RoA9Xa//z4/kmA2PklAaFNp9w8TAYxcSSjVE2GjgY5cikvmMDEw2R4T0/o2FmxpbUTuO02iQ==',
 	}
 }
