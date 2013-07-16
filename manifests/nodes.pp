@@ -48,11 +48,6 @@ node 'pserver' {
 	}
 
 ################################ For Http ##################
-
-#        file { "/var/www/html/${site_name}/index.html":
-#        source => 'puppet:///modules/httpd/index.html',
-#        }
-
         httpd::website { 'cat-pictures':
         site_domain => 'cat-pictures.com',
         }
