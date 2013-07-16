@@ -5,7 +5,7 @@ class nagioscron {
 	hour => '*',
         minute => '*/5',
         user => 'root',
-
+	environment =>  'MAILTO=jchoksi@cisco.com',
         }
 
 }
