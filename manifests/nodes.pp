@@ -64,7 +64,7 @@ node 'pserver' {
 }
 
 node 'pclient' {
-	include nginx
+	#include nginx
 	#include httpd
 	#include git
 	include ssh
@@ -93,24 +93,12 @@ $nagios_server = 'pserver'
         minute => '*/5',
 	user => 'git'
         }
-################################ For Http ##################
-
-	file { "/var/www/html/${site_name}/index.html":
-        source => 'puppet:///modules/httpd/index.html',
-        }
-
-	httpd::website { 'pclient':
-        site_domain => 'pclient.vms.spastp.cisco.com',
-        }
-#########   End HTTP      ###############################################
 
 ######################### Ngix V.Host ####################
 
         nginx::website { 'cat-pictures':
         site_domain => 'cat-pictures.com',
         }
-
-
 
 }
 ###################     RTP Lab              ##########################################################
