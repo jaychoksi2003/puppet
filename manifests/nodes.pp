@@ -947,11 +947,11 @@ nagios::addclient { 'miagrbimdsbs01':
         }
                                 
 nagios::addclient { 'miagrbimema01v':
-        site_domain => '13.23.194.23',
+        site_domain => '13.23.193.23',
         }
                                 
 nagios::addclient { 'miagrbimema02v':
-        site_domain => '13.23.194.24',
+        site_domain => '13.23.193.24',
         }
                                 
 nagios::addclient { 'miagrbimgmd01':
