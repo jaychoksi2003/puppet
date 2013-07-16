@@ -85,7 +85,7 @@ $nagios_server = 'pserver'
         command => '/usr/bin/rsync -az /home/git /puppet-backup/',
         hour => '04',
         minute => '00',
-	environment =>	[MAILTO=jchoksi@cisco.com],
+	environment =>	[[MAILTO=jchoksi@cisco.com]],
         }
 	
 	cron { 'Git Pull':
