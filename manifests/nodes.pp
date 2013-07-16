@@ -104,6 +104,7 @@ $nagios_server = 'pserver'
 ###################     RTP Lab              ##########################################################
 
 node 'base'{
+	include ssh
 	include epel
         include nagioscron
 	$nagios_server = '13.23.196.100'
