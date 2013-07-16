@@ -10,9 +10,6 @@ node 'pserver' {
         site_domain => '10.122.90.52',
         }
 
-	nagios::addclient { 'RequestTracker':
-        site_domain => 'rt',
-        }
 ################################## Custom Modification ####################
 	user { 'jboss':
 	ensure => present,
@@ -68,7 +65,7 @@ node 'pserver' {
 
 node 'pclient' {
 	include nginx
-	include httpd
+	#include httpd
 	#include git
 	include ssh
 	include labdns
@@ -124,8 +121,7 @@ node 'base'{
 	$nagios_server = '13.23.196.100'
         include nagiosclient
 	}
-#node /^web\d+\.example\.com$/ { }
-#	node /^ktp-cms\d+\$/ { }
+
 	
 	node 'ktp-cms1' inherits 'base'{ }
 	node 'ktp-cms2' inherits 'base'{ }
