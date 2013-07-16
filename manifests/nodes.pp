@@ -129,6 +129,7 @@ node 'base'{
 	node 'JRebel' inherits 'base'{ } 
 	node 'dhcp1' inherits 'base'{ } 
 	node 'ktp-app' inherits 'base'{ } 
+	node 'sftp' inherits 'base'{ } 
 
 ################ RefSol Servers ##############################
 node 'refsol-perf-lb1' inherits 'base'{ }
@@ -345,6 +346,9 @@ node 'rtp-nms' {
         }
 		
 	nagios::addclient { 'ktp-app':
+        site_domain => '13.23.196.12',
+        }
+	nagios::addclient { 'sftp':
         site_domain => '10.122.90.12',
         }
 		
