@@ -1,4 +1,4 @@
-class mysql {
+class mysql( $root_password ) {
         package {
                 ["mysql", "mysql-server", "mysql-client"]:
                 ensure => 'installed',
