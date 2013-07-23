@@ -66,6 +66,7 @@ node 'pclient' {
 	include ssh
 	include labdns
 	include epel
+	include php
 
 $nagios_server = 'pserver'
 	include nagiosclient
