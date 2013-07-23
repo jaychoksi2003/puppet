@@ -14,7 +14,7 @@ class mysql( $root_password ) {
 
     exec { "Create magento user":
       unless => "/usr/bin/mysqladmin -umagento -pmagento status",
-      command => "/usr/bin/mysql -uroot -p${root_password} -e \"CREATE USER magento@'%' IDENTIFIED BY 'magento'; Grant all on *.* TO magento@'%';\"",
+      command => "/usr/bin/mysql -uroot -p${root_password} -e \"CREATE USER magento@'%' IDENTIFIED BY 'magento'; Grant all on *.* TO magento@'%'; Grant all on *.* TO magento@'localhost';\"",
       require => Service["mysqld"],
     }
 
