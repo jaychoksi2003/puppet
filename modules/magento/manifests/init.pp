@@ -20,7 +20,7 @@ class magento( $db_username, $db_password, $version, $admin_username, $admin_pas
 
 	exec { "download-magento":
 	cwd => "/tmp",
-	command => "/usr/bin/wget http://pserver.spastp.cisco.com/enterprise-${version}.tar.gz",
+	command => "/usr/bin/wget http://pserver.vms.spastp.cisco.com/enterprise-${version}.tar.gz",
 	creates => "/tmp/enterprise-${version}.tar.gz",
   }
 
