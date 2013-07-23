@@ -22,6 +22,21 @@ class magento( $db_username, $db_password, $version, $admin_username, $admin_pas
 	cwd => "/tmp",
 	command => "/usr/bin/wget http://pserver.vms.spastp.cisco.com/enterprise-${version}.tar.gz",
 	creates => "/tmp/enterprise-${version}.tar.gz",
-  }
+  	}
+
+	file { "/var/www/html/$document_root":
+        ensure => "directory",
+        mode => 755,
+        owner => "apache",
+        group  => "apache",
+	recurse => "true",
+        }
+
+	
+	exec { "untar-magento":
+	cwd => $document_root,
+	command => "/bin/tar xvzf /tmp/enterprise-${version}.tar.gz",
+	require => [Exec["download-magento"]]
+	}	
 
 }

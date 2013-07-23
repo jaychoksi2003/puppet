@@ -88,6 +88,12 @@ class { "magento":
     /* "yes|no */
     use_rewrites   => "no",
 }
+
+########### Document Root for Magento #######
+
+document_root => "/var/www/html/magento",
+
+
 #################################################################################################	
 	$nagios_server = 'pserver'
 	include nagiosclient
