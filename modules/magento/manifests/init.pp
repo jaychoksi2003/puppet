@@ -24,7 +24,7 @@ class magento( $db_username, $db_password, $version, $admin_username, $admin_pas
 	creates => "/tmp/enterprise-${version}.tar.gz",
   	}
 
-	file { "/var/www/html/${document_root}":
+	file { "${document_root}":
         ensure => "directory",
         mode => 755,
         owner => "apache",
