@@ -87,11 +87,13 @@ class { "magento":
 
     /* "yes|no */
     use_rewrites   => "no",
+	
+    document_root => "/var/www/html/magento"
 }
 
 ########### Document Root for Magento #######
 
-$document_root = "/var/www/html/magento"
+#$document_root = "/var/www/html/magento"
 
 
 #################################################################################################	
