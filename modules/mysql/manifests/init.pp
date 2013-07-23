@@ -1,11 +1,11 @@
 class mysql( $root_password ) {
         package {
-                ["mysql", "mysql-server", "mysql-client"]:
+                ["mysql", "mysql-server"]:
                 ensure => 'installed',
         }
 	
 	exec { "Set MySQL server root password":
-        subscribe => [ Package["mysql-server"], Package["mysql-client"] ],
+        subscribe => [ Package["mysql-server"] ],
         refreshonly => true,
         unless => "mysqladmin -uroot -p${root_password} status",
         path => "/bin:/usr/bin",
