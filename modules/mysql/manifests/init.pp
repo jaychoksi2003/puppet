@@ -20,7 +20,7 @@ class mysql( $root_password ) {
 
     service { "mysql":
         require => [ Package["mysql-server"], Exec['Set MySQL server root password'] ],
-        hasstatus => true,
+        #hasstatus => true,
 	ensure => running,
     }	
 }
