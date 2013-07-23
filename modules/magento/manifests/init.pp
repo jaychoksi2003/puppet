@@ -1,4 +1,4 @@
-class magento( $db_username, $db_password, $version, $admin_username, $admin_password, $use_rewrites) {
+class magento( $db_username, $db_password, $version, $admin_username, $admin_password, $use_rewrites, $document_root) {
 
 	exec { "create-magentodb-db":
         unless => "/usr/bin/mysql -uroot -p${mysql::root_password} magentodb",
