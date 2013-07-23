@@ -34,6 +34,7 @@ node 'pserver' {
 	command => '/usr/bin/rsync -az /home/puppet/ /puppet-backup/',
 	hour => '04',
 	minute => '00',
+	environment =>  'MAILTO=jchoksi@cisco.com',
 	}
 #########################
 
