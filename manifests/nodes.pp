@@ -88,7 +88,7 @@ class { "magento":
     /* "yes|no */
     use_rewrites   => "no",
 	
-    document_root => "/var/www/html/magento",
+    document_root = "/var/www/html/magento"
 }
 
 

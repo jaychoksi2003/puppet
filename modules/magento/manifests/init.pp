@@ -24,7 +24,7 @@ class magento( $db_username, $db_password, $version, $admin_username, $admin_pas
 	creates => "/tmp/enterprise-${version}.tar.gz",
   	}
 
-	file { ${document_root}:
+	file { "${document_root}":
         ensure => "directory",
         mode => 755,
         owner => "apache",
@@ -33,10 +33,10 @@ class magento( $db_username, $db_password, $version, $admin_username, $admin_pas
         }
 
 	
-#	exec { "untar-magento":
-#	cwd => ${document_root},
-#	command => "/bin/tar xvzf /tmp/enterprise-${version}.tar.gz",
-#	require => [Exec["download-magento"]]
-#	}	
+	exec { "untar-magento":
+	cwd => "${document_root}",
+	command => "/bin/tar xvzf /tmp/enterprise-${version}.tar.gz",
+	require => [Exec["download-magento"]]
+	}	
 
 }
