@@ -18,4 +18,10 @@ class magento( $db_username, $db_password, $version, $admin_username, $admin_pas
         require => Exec["grant-magentodb-db-all"]
   	}
 
+	exec { "download-magento":
+	cwd => "/tmp",
+	command => "/usr/bin/wget http://pserver.spastp.cisco.com/enterprise-${version}.tar.gz",
+	creates => "/tmp/enterprise-${version}.tar.gz",
+  }
+
 }
