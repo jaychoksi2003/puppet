@@ -67,7 +67,8 @@ node 'pclient' {
 	include labdns
 	include epel
 	include php
-
+root_password => "root",
+	include mysql
 $nagios_server = 'pserver'
 	include nagiosclient
 
