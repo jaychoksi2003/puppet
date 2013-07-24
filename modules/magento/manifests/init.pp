@@ -36,7 +36,9 @@ class magento( $db_username, $db_password, $version, $admin_username, $admin_pas
 	exec { "untar-magento":
 	cwd => "${document_root}",
 	command => "/bin/tar xvzf /tmp/enterprise-${version}.tar.gz",
+	creates => "${document_root}/magento"
 	require => [Exec["download-magento"]]
+
 	}	
 
 }
