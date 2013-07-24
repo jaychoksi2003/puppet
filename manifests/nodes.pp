@@ -80,14 +80,17 @@ class { "magento":
     /* magento database settings */
     db_username    => "magento",
     db_password    => "magento",
-
+    db_name	   => "magentodb",
     /* magento admin user */
     admin_username => "admin",
-    admin_password => "123123abc",
+    admin_password => "cisco123",
+    admin_email => "admin@cisco.com",
 
     /* "yes|no */
-    use_rewrites   => "no",
+    use_rewrites   => "yes",
+
     document_root => "/var/www/html",
+    magento_url => "pclient.vms.spastp.cisco.com"
 }
 
 
