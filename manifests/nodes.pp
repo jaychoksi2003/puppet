@@ -122,9 +122,9 @@ class { "magento":
 
 ######################### Ngix V.Host ####################
 
-        nginx::website { 'cat-pictures':
-        site_domain => 'cat-pictures.com',
-        }
+#        nginx::website { 'cat-pictures':
+#        site_domain => 'cat-pictures.com',
+#        }
 
 }
 ###################     RTP Lab              ##########################################################

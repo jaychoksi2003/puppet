@@ -24,6 +24,13 @@ class magento( $db_name, $db_username, $db_password, $version, $admin_username, 
 	creates => "/tmp/enterprise-${version}.tar.gz",
   	}
 
+	exec { "untar-magento":
+	cwd => "${document_root}",
+	command => "/bin/tar xvzf /tmp/enterprise-${version}.tar.gz",
+	creates => "${document_root}/magento",
+	require => [Exec["download-magento"]]
+	}
+
 	file { "${document_root}":
         ensure => "directory",
         mode => 755,
@@ -32,15 +39,6 @@ class magento( $db_name, $db_username, $db_password, $version, $admin_username, 
 #	recurse => "true",
 	require => [Exec["untar-magento"]]
         }
-
-	
-	exec { "untar-magento":
-	cwd => "${document_root}",
-	command => "/bin/tar xvzf /tmp/enterprise-${version}.tar.gz",
-	creates => "${document_root}/magento",
-	require => [Exec["download-magento"]]
-
-	}
 	
 	host { 'magento.localhost':
         ip => '127.0.0.1',
