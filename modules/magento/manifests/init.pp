@@ -24,13 +24,14 @@ class magento( $db_username, $db_password, $version, $admin_username, $admin_pas
 	creates => "/tmp/enterprise-${version}.tar.gz",
   	}
 
-#	file { "${document_root}":
-#        ensure => "directory",
-#        mode => 755,
-#        owner => "apache",
-#        group  => "apache",
+	file { "${document_root}":
+        ensure => "directory",
+        mode => 755,
+        owner => "apache",
+        group  => "apache",
 #	recurse => "true",
-#        }
+	require => [Exec["untar-magento"]]
+        }
 
 	
 	exec { "untar-magento":
