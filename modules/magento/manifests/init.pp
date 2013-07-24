@@ -40,6 +40,12 @@ class magento( $db_username, $db_password, $version, $admin_username, $admin_pas
 	creates => "${document_root}/magento",
 	require => [Exec["download-magento"]]
 
+	}
+
+	exec { "setting-permissions":
+	cwd => "${document_root}/magento",
+	command => "/bin/chmod 550 mage; /bin/chmod o+w var var/.htaccess app/etc; /bin/chmod -R o+w media",
+	require => Exec["untar-magento"],
 	}	
 
 }
