@@ -3,7 +3,7 @@
 # Manages the VNC service
 #
 class vnc::service {
-  include vnc
+  include tigervnc
 
   service { 'vncserver':
     ensure    => $vnc::service_ensure_real,

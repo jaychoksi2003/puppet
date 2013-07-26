@@ -14,7 +14,7 @@
 # All Rights Reserved
 #
 class vnc::config {
-  include vnc
+  include tigervnc
 
   $notify_class = $vnc::refresh ? {
     false   => undef,

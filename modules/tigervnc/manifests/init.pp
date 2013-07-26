@@ -69,7 +69,7 @@
 # Copyright 2013 The Regents of the University of California
 # All Rights Reserved
 #
-class vnc (
+class tigervnc (
   $refresh = true,
   $servers = [ ],
   $service_enable = true,
@@ -89,7 +89,7 @@ class vnc (
     default             => $service_enable,
   }
 
-  Class['vnc'] ->
+  Class['tigervnc'] ->
     Class['vnc::install'] ->
     Class['vnc::config'] ->
     Class['vnc::service']
