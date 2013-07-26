@@ -23,7 +23,7 @@ class tigervnc::config {
 
   case $::osfamily {
     'RedHat': {
-      $vncservers_template = $tigervnc::vncservers_template
+      $vncservers_template = $tigervnc::tigervncservers_template
       file { '/etc/sysconfig/vncservers':
         ensure  => present,
         owner   => root,
