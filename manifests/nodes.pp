@@ -63,7 +63,7 @@ node 'pclient' {
 	#include nginx
 	#include httpd
 	#include git
-	include vnc
+	#include vnc
 	include ssh
 	include labdns
 	include epel
