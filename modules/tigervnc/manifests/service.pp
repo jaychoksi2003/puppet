@@ -2,7 +2,7 @@
 #
 # Manages the VNC service
 #
-class vnc::service {
+class tigervnc::service {
   include tigervnc
 
   service { 'vncserver':

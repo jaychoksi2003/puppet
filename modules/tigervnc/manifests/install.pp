@@ -18,7 +18,7 @@
 # This class is intended to be called from the vnc class, and should not be
 # called directly
 #
-class vnc::install {
+class tigervnc::install {
   case $::osfamily {
     'RedHat': {
       case $::operatingsystemrelease {

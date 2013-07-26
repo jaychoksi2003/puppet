@@ -77,7 +77,7 @@ class tigervnc (
   $xstartup_template = 'vnc/xstartup.erb',
   $vncservers_template = 'vnc/vncservers.erb'
 ) {
-  include vnc::install, vnc::config, vnc::service
+  include tigervnc::install, tigervnc::config, tigervnc::service
 
   $service_ensure_real = $service_ensure ? {
     /no(action|change)/ => undef,
@@ -90,7 +90,7 @@ class tigervnc (
   }
 
   Class['tigervnc'] ->
-    Class['vnc::install'] ->
-    Class['vnc::config'] ->
-    Class['vnc::service']
+    Class['tigervnc::install'] ->
+    Class['tigervnc::config'] ->
+    Class['tigervnc::service']
 }

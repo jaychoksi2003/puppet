@@ -13,17 +13,17 @@
 # Copyright 2013 The Regents of the University of California
 # All Rights Reserved
 #
-class vnc::config {
+class tigervnc::config {
   include tigervnc
 
-  $notify_class = $vnc::refresh ? {
+  $notify_class = $tigervnc::refresh ? {
     false   => undef,
-    default => Class['vnc::service'],
+    default => Class['tigervnc::service'],
   }
 
   case $::osfamily {
     'RedHat': {
-      $vncservers_template = $vnc::vncservers_template
+      $vncservers_template = $tigervnc::vncservers_template
       file { '/etc/sysconfig/vncservers':
         ensure  => present,
         owner   => root,
