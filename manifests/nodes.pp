@@ -63,6 +63,7 @@ node 'pclient' {
 	#include nginx
 	#include httpd
 	#include git
+	#include vnc
 	include ssh
 	include labdns
 	include epel
@@ -150,12 +151,16 @@ node 'base'{
 	node 'vms-dns' inherits 'base'{ }
 	node 'helpdesk' inherits 'base'{ } #Request Tracker
 	node 'smtp1' inherits 'base'{ } 
-	node 'ci01' inherits 'base'{ } 
 	node 'JRebel' inherits 'base'{ } 
 	node 'dhcp1' inherits 'base'{ } 
 	node 'ktp-app' inherits 'base'{ } 
 	node 'sftp' inherits 'base'{ } 
-
+	node 'ci01' { # Default SSH Class excluded
+		include epel
+		include nagioscron
+		$nagios_server = '13.23.196.100'
+		include nagiosclient
+		}
 ################ RefSol Servers ##############################
 node 'refsol-perf-lb1' inherits 'base'{ }
 node 'refsol-perf-wf1' inherits 'base'{ }

@@ -1,0 +1,27 @@
+{
+  "description": "Manages a vnc server installation on rhel hosts",
+  "summary": "Manages a vnc server installation on rhel hosts",
+  "source": "UNKNOWN",
+  "types": [
+
+  ],
+  "dependencies": [
+
+  ],
+  "project_page": "https://github.com/arusso/puppet-vnc",
+  "author": "arusso",
+  "version": "0.0.1",
+  "name": "arusso-vnc",
+  "checksums": {
+    "templates/vncservers.erb": "a9b6af684c527dae0050b3696811e568",
+    "manifests/service.pp": "fe18d5ad9f08f9675fc75d23bf45f4fb",
+    "manifests/config.pp": "28be9e0f222e026b5fc862a9d13ac09c",
+    "README.markdown": "cc2d31db9fcf23240e8b56fb84dd5a2f",
+    "manifests/install.pp": "336aee1f4e1539d9396fb0429921544d",
+    "LICENSE": "fbfe578caf7e0886e3aae63cdc7c27a3",
+    "templates/xstartup.erb": "7732d99938584b754ef364e73a9c9421",
+    "manifests/init.pp": "573bb7f613dc807d57c1681326ba7448",
+    "Modulefile": "52531e69644f0b2ff5330b0234d99d46"
+  },
+  "license": "MIT License"
+}
