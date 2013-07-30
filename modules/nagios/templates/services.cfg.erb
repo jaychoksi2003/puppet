@@ -55,4 +55,10 @@ define service{
         check_command                   check_local_procs!250!400!RSZDT
         }
 
+define service{
+        use                       generic-service         ; Name of service template to use
+        hostgroup_name		  Web Servers
+	service_description       HTTP
+        check_command             check_http
+        }
 

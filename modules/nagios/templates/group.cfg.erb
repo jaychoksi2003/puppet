@@ -3,3 +3,8 @@ define hostgroup{
         alias           Linux Servers ; Long name of the group
         members         *
         }
+define hostgroup{
+        hostgroup_name  Web Servers
+        alias           Web Servers ; Long name of the group
+        members         pclient
+        }
