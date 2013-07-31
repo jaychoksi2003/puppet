@@ -155,6 +155,7 @@ node 'base'{
 	node 'dhcp1' inherits 'base'{ } 
 	node 'ktp-app' inherits 'base'{ } 
 	node 'sftp' inherits 'base'{ } 
+	node 'repo1' inherits 'base'{ } 
 	node 'ci01' { # Default SSH Class excluded
 		include epel
 		include nagioscron
