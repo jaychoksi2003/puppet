@@ -382,6 +382,10 @@ node 'rtp-nms' {
 	nagios::addclient { 'sftp':
         site_domain => '10.122.90.12',
         }
+	
+	nagios::addclient { 'repo1':
+        site_domain => '10.122.90.21',
+        }
 		
 	nagios::addclient { 'rt':
         site_domain => '10.122.90.28',
