@@ -1,7 +1,7 @@
 class vms::service {
         service { 'rngd':
         ensure => running,
-        require => Package['rng-tools'],
+        require => File['/etc/sysconfig/rngd'],
         enable => true,
         }
 }
