@@ -3,9 +3,7 @@ class vms::install {
         ensure => installed,
         }
 	if $vms_role == "vms_installer" {
-
-	file { '/tmp/limits.conf':
-        source => 'puppet:///modules/vms/limits.conf',
-	}
+		package => 'vms_installer-5.0.1-77253',
+		ensure => 'instaled',
 	}
 }	
