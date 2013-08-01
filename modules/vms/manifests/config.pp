@@ -3,7 +3,7 @@ class vms::config {
 	source => 'puppet:///modules/vms/limits.conf',
 	owner => 'root',
 	group => 'root',
-	mode => '640',
+	mode => '644',
 	}
 
 	file { '/etc/yum.repos.d/vms.repo':
