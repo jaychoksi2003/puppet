@@ -4,6 +4,6 @@ class vms::install {
         }
 	if $vms_role == "vms_installer" {
 		package => 'vms_installer-5.0.1-77253',
-		ensure => 'instaled',
+		ensure => 'present',
 	}
 }	
