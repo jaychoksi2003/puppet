@@ -165,6 +165,7 @@ node 'base'{
 #################### VMS 5 #############
 node 'vms5-lb' inherits 'base'{
 	include haproxy
+	$vms_role = 'vms_installer'
 	include vms
  }
 
