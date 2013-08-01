@@ -9,6 +9,7 @@ class vms::config {
 	file { '/etc/sysconfig/rngd':
         source => 'puppet:///modules/vms/rngd',
 	require => Package[ 'rng-tools'],
+	notify => Service[ 'rngd'],
 	owner => 'root',
         group => 'root',
         mode => '640',
