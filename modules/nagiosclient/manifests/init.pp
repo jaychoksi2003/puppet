@@ -1,5 +1,5 @@
 class nagiosclient {
-	package { [ 'nrpe.x86_64', 'nagios-plugins', 'nagios-plugins-all', 'nagios-plugins-nrpe']:	
+	package { [ 'nrpe.x86_64', 'nagios-plugins', 'nagios-plugins-all', 'nagios-plugins-nrpe', 'xinetd']:	
         ensure => installed,
         }
 
@@ -10,6 +10,7 @@ class nagiosclient {
         }
 
 	service { 'xinetd':
+	require => Package[ 'xinetd'],
         ensure => running,
         enable => true,
         }
