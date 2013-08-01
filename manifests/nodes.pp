@@ -169,6 +169,10 @@ node 'vms5-lb' inherits 'base'{
 	include vms
  }
 
+node 'vms5-sso' inherits 'base'{
+	$vms_role = 'vms_sso'
+	include vms
+ }
 
 ################ RefSol Servers ##############################
 node 'refsol-perf-lb1' inherits 'base'{ }
@@ -406,6 +410,9 @@ node 'rtp-nms' {
         site_domain => '10.122.90.33',
         }
 
+	 nagios::addclient { 'vms5-sso':
+        site_domain => '10.122.90.35',
+        }
 
 
 ################## Ref. Solu. ##############
