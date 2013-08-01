@@ -8,7 +8,7 @@ class vms::install {
 			}
 	}
 	if $vms_role == "vms_sso" {
-		package { [ 'vms_base']:
+		package { [ 'vms_base', 'vms_server_standard', 'vms_admin', 'vms_keymanagement']:
                 ensure => 'present',
                         }
         }
