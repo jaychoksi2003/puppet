@@ -11,7 +11,7 @@ class vms::config {
 	require => Package[ 'rng-tools'],
 	owner => 'root',
         group => 'root',
-        mode => '644',
+        mode => '640',
         }
 
 	file { '/etc/yum.repos.d/vms.repo':
