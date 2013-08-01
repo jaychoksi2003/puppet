@@ -1,8 +1,7 @@
 class vms:install {
-	package {  'rng-tools':
-	ensure => installed,
-	}
-
+        package { [ 'rng-tools']:
+        ensure => installed,
+        }
 
 	service { 'rngd':
         ensure => running,
