@@ -162,6 +162,12 @@ node 'base'{
 		$nagios_server = '13.23.196.100'
 		include nagiosclient
 		}
+#################### VMS 5 #############
+node 'vms5-lb' inherits 'base'{
+	include haproxy
+ }
+
+
 ################ RefSol Servers ##############################
 node 'refsol-perf-lb1' inherits 'base'{ }
 node 'refsol-perf-wf1' inherits 'base'{ }
@@ -390,6 +396,16 @@ node 'rtp-nms' {
 	nagios::addclient { 'rt':
         site_domain => '10.122.90.28',
         }
+
+
+
+########################## VMS 5 ##########################
+	 nagios::addclient { 'vms5-lb':
+        site_domain => '10.122.90.33',
+        }
+
+
+
 ################## Ref. Solu. ##############
 
 nagios::addclient { 'refsol-perf-lb1':
