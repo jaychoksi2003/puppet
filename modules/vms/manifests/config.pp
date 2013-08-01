@@ -9,6 +9,9 @@ class vms::config {
 	file { '/etc/sysconfig/rngd':
         source => 'puppet:///modules/vms/rngd',
 	require => Package[ 'rng-tools'],
+	owner => 'root',
+        group => 'root',
+        mode => '644',
         }
 
 	file { '/etc/yum.repos.d/vms.repo':
