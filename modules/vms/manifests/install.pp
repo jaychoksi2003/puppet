@@ -1,4 +1,4 @@
-class vms:install {
+class vms::install {
         package { [ 'rng-tools']:
         ensure => installed,
         }
