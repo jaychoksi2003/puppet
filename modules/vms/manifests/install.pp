@@ -6,5 +6,11 @@ class vms::install {
 		package { 'vms_installer-5.0.1-77253':
 		ensure => 'present',
 			}
-	}	
+	}
+	if $vms_role == "vms_sso" {
+		package { [ 'vms_base']:
+                ensure => 'present',
+                        }
+        }
+	
 }
