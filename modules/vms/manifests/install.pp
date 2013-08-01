@@ -3,7 +3,8 @@ class vms::install {
         ensure => installed,
         }
 	if $vms_role == "vms_installer" {
-		package => 'vms_installer-5.0.1-77253',
+		package { 'vms_installer-5.0.1-77253':
 		ensure => 'present',
-	}
-}	
+			}
+	}	
+}
