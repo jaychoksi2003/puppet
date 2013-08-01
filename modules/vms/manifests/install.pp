@@ -3,9 +3,4 @@ class vms::install {
         ensure => installed,
         }
 
-	service { 'rngd':
-        ensure => running,
-        require => Package['rng-tools'],
-        enable => true,
-        }
 }	
