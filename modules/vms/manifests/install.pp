@@ -19,7 +19,8 @@ class vms::install {
                         }
         }
 	if $vms_role == "vms_em" {
-		package { [ 'vms_base', 'vms_server_standard', 'vms_entitlement']:
+		#package { [ 'vms_base', 'vms_server_standard', 'vms_entitlement']:
+		package { [ 'vms_base', 'vms_server_standard']:
                 ensure => 'present',
                         }
         }
