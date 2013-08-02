@@ -18,4 +18,15 @@ class vms::install {
                 ensure => 'present',
                         }
         }
+	if $vms_role == "vms_em" {
+		package { [ 'vms_base', 'vms_server_standard', 'vms_entitlement']:
+                ensure => 'present',
+                        }
+        }
+	
+	if $vms_role == "vms_wf" {
+		package { [ 'vms_base', 'vms_server_esb', 'vms_workflow', 'vms_ocesb_epg']:
+                ensure => 'present',
+                        }
+        }
 }

@@ -179,6 +179,16 @@ node 'vms5-cm' inherits 'base'{
 	include vms
 	}
 
+node 'vms5-em' inherits 'base'{ 
+	$vms_role = 'vms_em'
+	include vms
+	}
+
+node 'vms5-wf' inherits 'base'{ 
+	$vms_role = 'vms_wf'
+ 	include vms
+	}
+node 'vms5-solr' inherits 'base'{ }
 
 ################ RefSol Servers ##############################
 node 'refsol-perf-lb1' inherits 'base'{ }
@@ -424,6 +434,16 @@ node 'rtp-nms' {
         site_domain => '10.122.90.36',
         }
 
+	nagios::addclient { 'vms5-em':
+        site_domain => '10.122.90.37',
+        }
+
+	nagios::addclient { 'vms5-wf':
+        site_domain => '10.122.90.38',
+        }
+	nagios::addclient { 'vms5-solr':
+        site_domain => '10.122.90.39',
+        }
 
 ################## Ref. Solu. ##############
 
