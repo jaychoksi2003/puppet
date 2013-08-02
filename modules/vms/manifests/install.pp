@@ -19,10 +19,13 @@ class vms::install {
                         }
         }
 	if $vms_role == "vms_em" {
-		package { [ 'vms_base', 'vms_server_standard', 'vms_entitlement']:
-		#package { [ 'vms_base', 'vms_server_standard']:
+		package { [ 'vms_base', 'vms_server_standard']:
                 ensure => 'present',
                         }
+		package { [ 'vms_entitlement']:
+		ensure => 'present',
+		require => Package[ 'vms_server_standard'],
+		}
         }
 	
 	if $vms_role == "vms_wf" {
