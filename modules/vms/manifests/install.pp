@@ -33,4 +33,10 @@ class vms::install {
                ensure => 'present',
                         }
         }
+	
+#	if $vms_role == "vms_solr" {
+#		package { [ 'vms_base', 'vms_epg', 'vms_search_master']:
+#               ensure => 'present',
+#                        }
+#        }
 }

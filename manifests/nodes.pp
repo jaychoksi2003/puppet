@@ -188,7 +188,10 @@ node 'vms5-wf' inherits 'base'{
 	$vms_role = 'vms_wf'
  	include vms
 	}
-node 'vms5-solr' inherits 'base'{ }
+node 'vms5-solr' inherits 'base'{ 
+	$vms_role = 'vms_solr'
+	include vms
+	}
 
 ################ RefSol Servers ##############################
 node 'refsol-perf-lb1' inherits 'base'{ }
