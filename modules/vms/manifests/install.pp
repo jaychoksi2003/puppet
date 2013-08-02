@@ -13,4 +13,9 @@ class vms::install {
                         }
         }
 	
+	if $vms_role == "vms_cm" {
+		package { [ 'vms_base', 'vms_server_standard', 'vms_cms']:
+                ensure => 'present',
+                        }
+        }
 }
