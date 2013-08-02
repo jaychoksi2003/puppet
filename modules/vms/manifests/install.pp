@@ -28,9 +28,9 @@ class vms::install {
 		}
         }
 	
-	#if $vms_role == "vms_wf" {
-	#	package { [ 'vms_base', 'vms_server_esb', 'vms_workflow', 'vms_ocesb_epg']:
-        #        ensure => 'present',
-        #                }
-        #}
+	if $vms_role == "vms_wf" {
+		package { [ 'vms_base', 'vms_server_esb', 'vms_workflow', 'vms_ocesb_epg']:
+               ensure => 'present',
+                        }
+        }
 }
