@@ -155,12 +155,44 @@ node 'base'{
 	node 'dhcp1' inherits 'base'{ } 
 	node 'ktp-app' inherits 'base'{ } 
 	node 'sftp' inherits 'base'{ } 
+	node 'repo1' inherits 'base'{ } 
 	node 'ci01' { # Default SSH Class excluded
 		include epel
 		include nagioscron
 		$nagios_server = '13.23.196.100'
 		include nagiosclient
 		}
+#################### VMS 5 #############
+node 'vms5-lb' inherits 'base'{
+	include haproxy
+	$vms_role = 'vms_installer'
+	include vms
+ }
+
+node 'vms5-sso' inherits 'base'{
+	$vms_role = 'vms_sso'
+	include vms
+ }
+
+node 'vms5-cm' inherits 'base'{ 
+	$vms_role = 'vms_cm'
+	include vms
+	}
+
+node 'vms5-em' inherits 'base'{ 
+	$vms_role = 'vms_em'
+	include vms
+	}
+
+node 'vms5-wf' inherits 'base'{ 
+	$vms_role = 'vms_wf'
+ 	include vms
+	}
+node 'vms5-solr' inherits 'base'{ 
+	$vms_role = 'vms_solr'
+	include vms
+	}
+
 ################ RefSol Servers ##############################
 node 'refsol-perf-lb1' inherits 'base'{ }
 node 'refsol-perf-wf1' inherits 'base'{ }
@@ -381,10 +413,41 @@ node 'rtp-nms' {
 	nagios::addclient { 'sftp':
         site_domain => '10.122.90.12',
         }
+	
+	nagios::addclient { 'repo1':
+        site_domain => '10.122.90.21',
+        }
 		
 	nagios::addclient { 'rt':
         site_domain => '10.122.90.28',
         }
+
+
+
+########################## VMS 5 ##########################
+	 nagios::addclient { 'vms5-lb':
+        site_domain => '10.122.90.33',
+        }
+
+	 nagios::addclient { 'vms5-sso':
+        site_domain => '10.122.90.35',
+        }
+
+	nagios::addclient { 'vms5-cm':
+        site_domain => '10.122.90.36',
+        }
+
+	nagios::addclient { 'vms5-em':
+        site_domain => '10.122.90.37',
+        }
+
+	nagios::addclient { 'vms5-wf':
+        site_domain => '10.122.90.38',
+        }
+	nagios::addclient { 'vms5-solr':
+        site_domain => '10.122.90.39',
+        }
+
 ################## Ref. Solu. ##############
 
 nagios::addclient { 'refsol-perf-lb1':
