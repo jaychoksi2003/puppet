@@ -231,7 +231,7 @@ command[check_http]=/usr/lib64/nagios/plugins/check_http -I 127.0.0.1
 command[check_ping]=/usr/lib64/nagios/plugins/check_ping -H 127.0.0.1 -w 340,20% -c 370,60%
 command[check_swap]=/usr/lib64/nagios/plugins/check_swap -w 10% -c 5%
 command[check_mem]=/usr/lib64/nagios/plugins/check_mem.pl -w 80 -c 90
-
+command[check_ssh]=/usr/lib64/nagios/plugins/check_ssh -H localhost
 
 
 # The following examples allow user-supplied arguments and can
