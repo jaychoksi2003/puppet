@@ -29,6 +29,12 @@ node 'pserver' {
 	type => 'rsa',
 	key => 'AAAAB3NzaC1yc2EAAAABIwAAAQEAxZdO1cSsx0seJzT7DAwsy/T2+dgcxT78ZwJ0g+ArLZK5o8hHvlxR8fLpmsXNkHQ2jub9biv5ga+4BqGIpxA33hCcrGsVXo8+lX9z53A0kWAwLOw/VUU6OmClbq9acQ/HssC9mQ2kgD/lCu2ndSPR/XpOepFVd+Z6i654XtB4QBhjXkA8O0gvctJ2AFttwsaEINQokgcN2Cgtuwry8IGnCPNExlHiYUuRa+0x6aH+o2Mvko34Di1jaEJS0+9qxPiRmMDLamyKWehqOiIDULv1hF3zluYAnBc4pC5fuT13//CFL74UAi6KfooYvZIuk3qV7TXEjC/gsXF3t/pAyH7r3Q=='
 	}
+	
+	ssh_authorized_key { 'spastp-vms-100':
+	user => 'root',
+	type => 'rsa',
+	key => 'AAAAB3NzaC1yc2EAAAABIwAAAQEAqBjD5g1+6GxrwnbAw29YGkeMfbwOvhHlODhn5qvuJWOqqyq14Z8YeeahmODjXKfqrCbS3RNtAnyqoRk2oT9/FcgJiK0rI2hG7VBnsFTUhmzLynCx+e/cpDD16vnGQ+ff5n23QWDny60rzgcVy/Sc/8NC5NLoVJrMObg95ADbxvks8PYATAnSkdQU0U3Qwi6ARK4kQsL+brvSCASCY7Tw5fwlYnam4v+z8/KP8lsuwbsuFhJOdCMmXtHL9UsbuBv+hrlZ+Z+ObYO3czlyjPnJWBnhedpM2WQSXyMBf2eHMZmVnGwWhZ/dTrapexDGhfk2h1zxsE3GIzbjGCNxhm0BqQ=='
+	}
 
 	cron { 'Back up of Puppet Config':
 	command => '/usr/bin/rsync -az /home/puppet/ /puppet-backup/',
