@@ -49,6 +49,13 @@ define service{
         }
 
 	define service{
+        use                        generic-service         ; Name of service template to use
+        hostgroup_name  All Servers
+        service_description        SSH Status
+        check_command              check_nrpe!check_ssh
+        }
+
+	define service{
          use                        generic-service         ; Name of service template to use
          hostgroup_name  All Servers
         service_description             Total Processes
