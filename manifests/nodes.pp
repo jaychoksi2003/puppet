@@ -289,6 +289,7 @@ node 'refsol-dev-mysql' inherits 'base'{ }
 
 
 ################## Verizon #############################################
+node 'rtp-verizonz-dev-OL' inherits 'base' { }
 node 'vzzd2-mag' inherits 'base' { }
 node 'vzzd2-cms' inherits 'base' { }
 node 'vzzd2-mon' inherits 'base' { }
@@ -801,6 +802,10 @@ nagios::addclient { 'refsol-dev-mysql':
         }
 
 ################ Verizon ####################
+nagios::addclient { 'rtp-verizonz-dev-OL':
+        site_domain => '10.122.90.155',
+        }
+
 nagios::addclient { 'vzzd2-mag':
         site_domain => '13.23.201.68',
         }
