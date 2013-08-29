@@ -6,7 +6,7 @@ class vms::config {
 	mode => '644',
 	}
 
-	file { '/etc/security/90-nproc.conf':
+	file { '/etc/security/limits.d/90-nproc.conf':
 	source => 'puppet:///modules/vms/90-nproc.conf',
 	owner => 'root',
 	group => 'root',
