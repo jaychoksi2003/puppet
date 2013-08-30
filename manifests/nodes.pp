@@ -200,7 +200,8 @@ node 'vms5-solr' inherits 'base'{
 	}
 
 ################ RefSol Servers ##############################
-node 'refsol-perf-lb1' inherits 'base'{ }
+#node 'refsol-perf-lb1' inherits 'base'{ }
+node 'refsol-perf-lb' inherits 'base'{ }
 node 'refsol-perf-wf1' inherits 'base'{ }
 node 'refsol-perf-wf2' inherits 'base'{ }
 node 'refsol-perf-sso1' inherits 'base'{ }
@@ -457,7 +458,7 @@ node 'rtp-nms' {
 
 ################## Ref. Solu. ##############
 
-nagios::addclient { 'refsol-perf-lb1':
+nagios::addclient { 'refsol-perf-lb':
         site_domain => '10.122.90.13',
         }
                                 
