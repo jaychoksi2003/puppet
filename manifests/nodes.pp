@@ -139,7 +139,7 @@ class { "magento":
 node 'base'{
 	include ssh
 	include epel
-        include nagioscron
+        include rootcron
 	$nagios_server = '13.23.196.100'
         include nagiosclient
 	}
@@ -164,7 +164,7 @@ node 'base'{
 	node 'repo1' inherits 'base'{ } 
 	node 'ci01' { # Default SSH Class excluded
 		include epel
-		include nagioscron
+		include rootcron
 		$nagios_server = '13.23.196.100'
 		include nagiosclient
 		}
@@ -200,7 +200,8 @@ node 'vms5-solr' inherits 'base'{
 	}
 
 ################ RefSol Servers ##############################
-node 'refsol-perf-lb1' inherits 'base'{ }
+#node 'refsol-perf-lb1' inherits 'base'{ }
+node 'refsol-perf-lb' inherits 'base'{ }
 node 'refsol-perf-wf1' inherits 'base'{ }
 node 'refsol-perf-wf2' inherits 'base'{ }
 node 'refsol-perf-sso1' inherits 'base'{ }
@@ -362,7 +363,7 @@ node 'api-stg' inherits 'base' { }
 
 ################### Below is NagiOS Server ###############################
 node 'rtp-nms' {
-	include nagioscron
+	include rootcron
 	include nagios
 
 	nagios::addclient { 'ktp-cms1':
@@ -457,7 +458,7 @@ node 'rtp-nms' {
 
 ################## Ref. Solu. ##############
 
-nagios::addclient { 'refsol-perf-lb1':
+nagios::addclient { 'refsol-perf-lb':
         site_domain => '10.122.90.13',
         }
                                 

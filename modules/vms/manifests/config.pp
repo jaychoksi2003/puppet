@@ -6,6 +6,13 @@ class vms::config {
 	mode => '644',
 	}
 
+	file { '/etc/security/limits.d/90-nproc.conf':
+	source => 'puppet:///modules/vms/90-nproc.conf',
+	owner => 'root',
+	group => 'root',
+	mode => '644',
+	}
+
 	file { '/etc/sysconfig/rngd':
         source => 'puppet:///modules/vms/rngd',
 	require => Package[ 'rng-tools'],
