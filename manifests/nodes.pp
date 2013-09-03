@@ -139,7 +139,7 @@ class { "magento":
 node 'base'{
 	include ssh
 	include epel
-        include nagioscron
+        include rootcron
 	$nagios_server = '13.23.196.100'
         include nagiosclient
 	}
@@ -164,7 +164,7 @@ node 'base'{
 	node 'repo1' inherits 'base'{ } 
 	node 'ci01' { # Default SSH Class excluded
 		include epel
-		include nagioscron
+		include rootcron
 		$nagios_server = '13.23.196.100'
 		include nagiosclient
 		}
@@ -363,7 +363,7 @@ node 'api-stg' inherits 'base' { }
 
 ################### Below is NagiOS Server ###############################
 node 'rtp-nms' {
-	include nagioscron
+	include rootcron
 	include nagios
 
 	nagios::addclient { 'ktp-cms1':

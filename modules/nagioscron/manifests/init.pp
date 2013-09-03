@@ -1,4 +1,4 @@
-class nagioscron {
+class rootcron {
         
 	cron { 'Git Pull':
 	command => '/usr/local/bin/pull-updates',
