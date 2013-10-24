@@ -402,29 +402,6 @@ node 'rtp-nms' {
 
 
 
-########################## VMS 5 ##########################
-	 nagios::addclient { 'vms5-lb':
-        site_domain => '10.122.90.33',
-        }
-
-	 nagios::addclient { 'vms5-sso':
-        site_domain => '10.122.90.35',
-        }
-
-	nagios::addclient { 'vms5-cm':
-        site_domain => '10.122.90.36',
-        }
-
-	nagios::addclient { 'vms5-em':
-        site_domain => '10.122.90.37',
-        }
-
-	nagios::addclient { 'vms5-wf':
-        site_domain => '10.122.90.38',
-        }
-	nagios::addclient { 'vms5-solr':
-        site_domain => '10.122.90.39',
-        }
 
 ################## Ref. Solu. ##############
 
