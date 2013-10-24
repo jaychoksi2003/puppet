@@ -168,36 +168,6 @@ node 'base'{
 		$nagios_server = '13.23.196.100'
 		include nagiosclient
 		}
-#################### VMS 5 #############
-node 'vms5-lb' inherits 'base'{
-	include haproxy
-	$vms_role = 'vms_installer'
-	include vms
- }
-
-node 'vms5-sso' inherits 'base'{
-	$vms_role = 'vms_sso'
-	include vms
- }
-
-node 'vms5-cm' inherits 'base'{ 
-	$vms_role = 'vms_cm'
-	include vms
-	}
-
-node 'vms5-em' inherits 'base'{ 
-	$vms_role = 'vms_em'
-	include vms
-	}
-
-node 'vms5-wf' inherits 'base'{ 
-	$vms_role = 'vms_wf'
- 	include vms
-	}
-node 'vms5-solr' inherits 'base'{ 
-	$vms_role = 'vms_solr'
-	include vms
-	}
 
 ################ RefSol Servers ##############################
 #node 'refsol-perf-lb1' inherits 'base'{ }
