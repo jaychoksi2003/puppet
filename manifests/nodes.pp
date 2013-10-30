@@ -145,13 +145,6 @@ node 'base'{
 	}
 
 	
-	node 'ktp-cms1' inherits 'base'{ }
-	node 'ktp-cms2' inherits 'base'{ }
-	node 'ktp-cms3' inherits 'base'{ }
-	node 'ktp-cms4' inherits 'base'{ }
-	node 'ktp-cms5' inherits 'base'{ }
-	node 'ktp-cms6' inherits 'base'{ }
-	node 'ktp-web1' inherits 'base'{ }
 	
 
 	node 'vms-dns' inherits 'base'{ }
@@ -336,33 +329,6 @@ node 'rtp-nms' {
 	include rootcron
 	include nagios
 
-	nagios::addclient { 'ktp-cms1':
-        site_domain => '13.23.201.133',
-        }
-
-	nagios::addclient { 'ktp-cms2':
-        site_domain => '13.23.201.135',
-        }
-		
-	nagios::addclient { 'ktp-cms3':
-        site_domain => '13.23.201.137',
-        }
-		
-	nagios::addclient { 'ktp-cms4':
-        site_domain => '13.23.201.139',
-        }
-		
-	nagios::addclient { 'ktp-cms5':
-        site_domain => '13.23.201.141',
-        }
-		
-	nagios::addclient { 'ktp-cms6':
-        site_domain => '13.23.201.142',
-        }
-		
-	nagios::addclient { 'ktp-web1':
-        site_domain => '13.23.201.146',
-        }
 ############ Others ######################
 
 	nagios::addclient { 'vms-dns':
