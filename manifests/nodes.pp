@@ -995,6 +995,8 @@ nagios::addclient { 'miagrbimgww02v':
 nagios::addclient { 'api-stg':
         site_domain => '10.122.90.4',
         }                          
-
+############## End of Node Declartion ####################
 
 }
+
+
