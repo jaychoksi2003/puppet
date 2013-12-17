@@ -145,13 +145,6 @@ node 'base'{
 	}
 
 	
-	node 'ktp-cms1' inherits 'base'{ }
-	node 'ktp-cms2' inherits 'base'{ }
-	node 'ktp-cms3' inherits 'base'{ }
-	node 'ktp-cms4' inherits 'base'{ }
-	node 'ktp-cms5' inherits 'base'{ }
-	node 'ktp-cms6' inherits 'base'{ }
-	node 'ktp-web1' inherits 'base'{ }
 	
 
 	node 'vms-dns' inherits 'base'{ }
@@ -168,36 +161,6 @@ node 'base'{
 		$nagios_server = '13.23.196.100'
 		include nagiosclient
 		}
-#################### VMS 5 #############
-node 'vms5-lb' inherits 'base'{
-	include haproxy
-	$vms_role = 'vms_installer'
-	include vms
- }
-
-node 'vms5-sso' inherits 'base'{
-	$vms_role = 'vms_sso'
-	include vms
- }
-
-node 'vms5-cm' inherits 'base'{ 
-	$vms_role = 'vms_cm'
-	include vms
-	}
-
-node 'vms5-em' inherits 'base'{ 
-	$vms_role = 'vms_em'
-	include vms
-	}
-
-node 'vms5-wf' inherits 'base'{ 
-	$vms_role = 'vms_wf'
- 	include vms
-	}
-node 'vms5-solr' inherits 'base'{ 
-	$vms_role = 'vms_solr'
-	include vms
-	}
 
 ################ RefSol Servers ##############################
 #node 'refsol-perf-lb1' inherits 'base'{ }
@@ -366,33 +329,6 @@ node 'rtp-nms' {
 	include rootcron
 	include nagios
 
-	nagios::addclient { 'ktp-cms1':
-        site_domain => '13.23.201.133',
-        }
-
-	nagios::addclient { 'ktp-cms2':
-        site_domain => '13.23.201.135',
-        }
-		
-	nagios::addclient { 'ktp-cms3':
-        site_domain => '13.23.201.137',
-        }
-		
-	nagios::addclient { 'ktp-cms4':
-        site_domain => '13.23.201.139',
-        }
-		
-	nagios::addclient { 'ktp-cms5':
-        site_domain => '13.23.201.141',
-        }
-		
-	nagios::addclient { 'ktp-cms6':
-        site_domain => '13.23.201.142',
-        }
-		
-	nagios::addclient { 'ktp-web1':
-        site_domain => '13.23.201.146',
-        }
 ############ Others ######################
 
 	nagios::addclient { 'vms-dns':
@@ -432,29 +368,6 @@ node 'rtp-nms' {
 
 
 
-########################## VMS 5 ##########################
-	 nagios::addclient { 'vms5-lb':
-        site_domain => '10.122.90.33',
-        }
-
-	 nagios::addclient { 'vms5-sso':
-        site_domain => '10.122.90.35',
-        }
-
-	nagios::addclient { 'vms5-cm':
-        site_domain => '10.122.90.36',
-        }
-
-	nagios::addclient { 'vms5-em':
-        site_domain => '10.122.90.37',
-        }
-
-	nagios::addclient { 'vms5-wf':
-        site_domain => '10.122.90.38',
-        }
-	nagios::addclient { 'vms5-solr':
-        site_domain => '10.122.90.39',
-        }
 
 ################## Ref. Solu. ##############
 
