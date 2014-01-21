@@ -1,0 +1,5 @@
+[vms]
+name=CentOS-$releasever - VMS
+baseurl=http://repo1.vms.spastp.cisco.com/vms/
+enabled=1
+gpgcheck=0

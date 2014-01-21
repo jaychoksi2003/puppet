@@ -1,0 +1,10 @@
+define hostgroup{
+        hostgroup_name  All Servers
+        alias           Linux Servers ; Long name of the group
+        members         *
+        }
+define hostgroup{
+        hostgroup_name  Web Servers
+        alias           Web Servers ; Long name of the group
+        members          refsol-perf-lb, refsol-perf-mag1, refsol-perf-mag2, refsol-perf-mag3, refsol-perf-mag4, refsol-sit-lb, refsol-dev-lb,vzzd2-mag,api-stg,rt,repo1
+        }

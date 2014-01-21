@@ -1,0 +1,92 @@
+define hostgroup{
+        hostgroup_name  others
+        alias           Others ; Long name of the group
+        members         <%= @site_name %>
+        }
+
+
+        define host{
+        use                     linux-server
+        host_name               <%= @site_name %>
+        alias                   <%= @site_name %>
+        address                 <%= @site_domain %>
+        }	
+
+define service{
+           use                        generic-service
+           hostgroup_name            others
+           service_description       CPU Load
+           check_command         check_nrpe!check_load
+           host_name		
+           }
+define service{
+           use                          generic-service
+	   hostgroup_name            others
+           service_description    Current Users
+           check_command       check_nrpe!check_users
+	   host_name		
+           }
+
+
+define service{
+           use                           generic-service
+	   hostgroup_name            others
+           service_description      Zombie Processes
+           check_command        check_nrpe!check_zombie_procs
+	   host_name		
+	   }
+
+
+define service{
+	use                          generic-service
+	hostgroup_name            others
+	service_description    Current Disk Status
+	check_command       check_nrpe!check_disk
+	host_name	
+}
+
+define service{
+        use                          generic-service
+        hostgroup_name            others
+        service_description    Current PING Status
+        check_command       check_nrpe!check_ping!20!60
+	host_name		
+}
+
+	define service{
+        use                          generic-service
+        hostgroup_name            others
+        service_description    Current Memory Status
+        check_command       check_nrpe!check_mem!80!90
+        host_name
+	}
+	
+	define service{
+        use                        generic-service         ; Name of service template to use
+        hostgroup_name            others
+        service_description        Swap Usage
+        check_command              check_nrpe!check_swap
+        }
+
+	define service{
+         use                        generic-service         ; Name of service template to use
+         hostgroup_name            others
+        service_description             Total Processes
+        check_command                   check_local_procs!250!400!RSZDT
+        }
+
+
+#	define service{
+#        use                        generic-service         ; Name of service template to use
+#        host_name     		   ktp-app
+#        service_description        TCP Port 9090
+#        check_command              check_nrpe!check_tcp
+#        }
+
+#	define service{
+#        use                       generic-service         ; Name of service template to use
+#        host_name                 rt
+#        service_description       HTTP
+#        check_command             check_http
+#        }
+
