@@ -64,7 +64,6 @@ node 'pserver' {
 
 
 }
-#### End of PServer #########
 node 'pclient' {
 	#include nginx
 	#include httpd
